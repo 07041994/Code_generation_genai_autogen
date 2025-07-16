@@ -1,0 +1,91 @@
+{
+  "login-page": {
+    "username": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "username"  
+    },
+    "password": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "password"
+    },
+    "signin": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='form-sign-in']/button/span[2]"
+    }
+  },
+  "Account-Summary-page": {
+	"popup_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h5[@class='modal-title' and contains(text(),'We have switched your account to e‑statements!')]"  
+    },
+    "Acknowledge": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"   
+    },
+    "Thankyou": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h5[@class='modal-title' and contains(text(),'Thank you!')]"  
+    },
+	"pastdue_text": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h2[@class='h5' and contains(text(),'Your account is currently past due')]"
+    },
+	"closePastduePopup": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='close']//i[@class='bi bi-x']"
+    }, 
+	"Account_summary_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='accountSummaryPage']/h1/span[2]"
+    }
+  },
+  
+  "Request-payoff-page": {
+    "Request_payoff_quote": {
+      "element_type": "link",
+      "by": "xpath",
+      "id-obj": "(//a[contains(text(),'Request Payoff Quote')])[2]"
+    },
+    "Request_payoff_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "///*[@id='payoffQuotePage']/div[1]/div/h1"
+    },
+    "Estimated_payoff_quote": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='payoffQuotePage']/div[4]/div/div/div/h2"
+    },
+    "printButton": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//a[@class='button secondary']"
+    }
+  },
+  "UserDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/a/span[2]"
+  },
+  
+	"Signout": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/ul/li[4]/a"
+  },
+  
+  "Signout_message": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj":"//*[contains(text(),'You are now signed out')]"
+  }
+}  

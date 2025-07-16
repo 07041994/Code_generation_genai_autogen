@@ -1,0 +1,23 @@
+{
+	"username": "Brower\\Lruser002",
+	"password": "March@002",
+	"captivePartner": "Chrysler",
+	"role": "RIMS.ALL",
+	"effFrmDay": "28",
+	"effFrmMonth": "April",
+	"effFrmYear": "2025",
+	"pricingAttributeType1": "Base Lease Flat",
+	"pricingAttributeType2": "Base Retail Flat",
+	"pricingAttributeType3": "Lease Participation",
+	"pricingAttributeType4": "Security Deposit Waiver",
+	"pricingAttributeMinAmountBase": "10",
+	"pricingAttributeMaxAmountBase": "10000",
+	"pricingAttributeAmountLeaseParticipation": "1",
+	"pricingAttributeAmountSDLeast": "0",
+	"pricingAttributeAmountSDMost": "2",
+	"minTermDecimal": "3.5",
+	"maxTermDecimal": "4.5",
+	"LessMinTerm": "0",
+	"LessMaxTerm": "1000"
+	
+	}

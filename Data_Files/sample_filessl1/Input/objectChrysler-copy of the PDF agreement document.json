@@ -1,0 +1,105 @@
+{
+    "LoginPage": {
+        "username": {
+            "element_type": "inputtext",
+            "by": "id",
+            "id-obj": "username"
+        },
+        "password": {
+            "element_type": "inputtext",
+            "by": "id",
+            "id-obj": "password"
+        },
+        "signin": {
+            "element_type": "button",
+            "by": "xpath",
+            "id-obj": "//*[@id='form-sign-in']/button/span[2]"
+        }
+    },
+    "MaturityModificationPage": {
+         "SplashPageHeader": {
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//h4[@class='h4']/strong[text()='Maturity Date']"
+         },
+        "Click here": {
+            "element_type": "link",
+            "by": "xpath",
+            "id-obj": "//*[@id='maturityModificationPage']/div[4]/div/div/p/a"
+        },
+       "AccountMaturityModificationHeader": {
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//*[@id='automateMaturityModification']/h3"
+         },
+        "RequestMaturityModification": {
+            "element_type": "link",
+            "by": "xpath",
+            "id-obj": "//*[@id='display-mat-mod-card']/div/div[4]/div/div/div/div[2]/a/div/div/div[1]/h4"
+         },
+        "Current": {
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//*[@id='request-mat-mod-data']/div/div[3]/div/h6/strong"
+         },
+       "Proposed Modifcation":{
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//*[@id='request-mat-mod-data']/div/div[5]/div/h6/strong"
+         },
+       "Continue button": {
+            "element_type": "button",
+            "by": "xpath",
+            "id-obj": "//button[text()='Continue']"
+        },
+       "Consent":{
+            "element_type": "checkbox",
+            "by": "xpath",
+            "id-obj": "//*[@id='consent-mat-mod']"
+         },
+        "Error Msg":{
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//p[@class='ko-error-message']"
+         },
+        "PDF Agreement": {
+            "element_type": "link",
+            "by": "xpath",
+            "id-obj": "img[alt='Maturity Modification Request Agreement Document Link']"
+        } ,
+       "Submit button": {
+            "element_type": "button",
+            "by": "xpath",
+            "id-obj": "//button[text()='Submit']"
+        },
+     "Confirmation Page": {
+            "element_type": "text",
+            "by": "xpath",
+            "id-obj": "//*[@id='request-mat-mod-consent-confirmation']/div/div[2]/div/span[1]/strong"
+         }
+     },
+
+    "FilenetPage": {
+        "Acquisition by Account Number": {
+            "element_type": "link",
+            "by": "xpath",
+            "id-obj": "//*[@id='dijit__TreeNode_3_label']"
+        },
+        "Account Number": {
+            "element_type": "inputtext",
+            "by": "xpath",
+            "id-obj": "//*[@id='ecm_widget_search_SearchForm_3_ecm.widget.SearchCriterian_0']"
+        },
+      "Search": {
+            "element_type": "button",
+            "by": "xpath",
+            "id-obj": "//*[@id='dijit_form_Button_13_label']"
+        },
+        "PDF documnet": {
+            "element_type": "link",
+            "by": "xpath",
+            "id-obj": "img[alt='application/pdf']"
+        }
+    }
+    
+}

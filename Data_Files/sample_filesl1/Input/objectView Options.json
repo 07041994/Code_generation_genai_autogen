@@ -1,0 +1,71 @@
+{
+	"login-page": {
+	"username": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "username"  
+    },
+    "password": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "password"
+    },
+    "signin": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='form-sign-in']/button/span[2]"
+    }
+  },
+ "MaturityMod_Splash_page":{
+	"Matmod_header": {
+		"element_type": "text",
+		"by": "xpath",
+		"id-obj": "//h4[@class='h4']/strong[text()='Maturity Date']"
+	},
+    "AcknowledgementBtn": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='submit-mat-mod-acknowledgement']/div/div/button"
+    },
+	"Account_summary_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='accountSummaryPage']/h1/span[2]"
+    },
+	"closePastduePopup": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='close']//i[@class='bi bi-x']"
+    },
+	"ViewOptions": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj":"//*[@id='accountSummaryPage']//div/button[contains(text(),'View Options')]"
+	},
+	"ViewOptionVerbiage":{
+	  "element_type": "button",
+      "by": "xpath",
+      "id-obj":"(//*[@id='accountSummaryPage']//span)[67]" 
+	}
+},
+
+    "UserDropDown":{
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/a/span[2]"
+    },
+    "Signout": { 
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj":"(//*[@id='menu-secondary']//a[text()='Sign Out'])[2]"
+    },
+  
+  "Signout_message": {   
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj":"//*[contains(text(),'You are now signed out')]"
+  }
+  
+ }
+  
+  

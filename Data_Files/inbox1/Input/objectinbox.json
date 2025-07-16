@@ -1,0 +1,124 @@
+{
+    "login-page": {
+	  "UserName": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "username"  
+    },
+    "Password":{
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "password"
+    },
+    "SignInButton": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='form-sign-in']/button/span[2]"
+    }
+  },
+  "Account-Summary-page": {
+	"popup_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h5[@class='modal-title' and contains(text(),'We have switched your account to e‑statements!')]"  
+    },
+    "AcknowledgePopupBtn": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"   
+    },
+    "Thankyou": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h5[@class='modal-title' and contains(text(),'Thank you!')]"  
+    },
+	"pastdue_text": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h2[@class='h5' and contains(text(),'Your account is currently past due')]"
+    },
+	"closePastduePopup": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='close']//i[@class='bi bi-x']"
+    },
+    "AccountSummaryHeader": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='accountSummaryPage']/h1/span[2]"
+    }
+  },
+  "inboxPage": {
+    "inboxLink": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='menu-secondary']/li[2]/a"
+    },
+    "allmessageText": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[@class='col-xs-6']/p"
+    },
+    "newmessageBoxLink": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='inboxPage']/div[1]/div/div[1]/div[1]/div/div/div[1]/div[2]/a/img"
+    },
+    "contactCustomerServiceHeader": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[@class='modal-header']//h5[contains(text(),'Contact Customer Service')]"
+    },
+    "selectAccountYouAreContactingAboutDropdown": {
+      "element_type": "dropdown",
+      "by": "id",
+      "id-obj": "ccs-account"
+    },
+    "subjectDropdown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "//*[@id='ccs-subject']"
+    },
+    "messageInputText": {
+      "element_type": "inputtext",
+      "by": "xpath",
+      "id-obj": "//*[@id='ccs-message']"
+    },
+    "submitButton": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='Message']/div/div/div[2]/div[3]/button[1]"
+    },
+    "thankYouMessageText": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='Message']/div/div/div[2]/div[1]/p"
+    },
+    "continueButton": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//*[@id='Message']/div/div/div[2]/div[1]/button"
+    }
+  },
+  "UserDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/a/span[2]"
+  },
+  
+	"Signout": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary]/li[6]/ul/li[4]/a"
+  },
+  
+  "Signout_message": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj":"//*[contains(text(),'You are now signed out')]"
+  }
+}  
+	
+	
+
+  

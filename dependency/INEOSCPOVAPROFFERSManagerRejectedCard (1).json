@@ -1,0 +1,175 @@
+{
+  "Dashboard": {
+    "captivePartnerDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "(//div[@class='rims-nav-item'])[2]/select"
+    }
+  },
+  "Incentives": {
+	  "incentives": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "//label[text()='Incentives']"
+    },
+	"CPOVAPROffers": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "(//div[@class='card-text text-center'])[4]"
+    },
+	"CreateCPOVAPROffers": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='create-card-element round-button']"
+    },
+	
+	"EffectiveThru": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//input[@name='dp'])[2]"
+    },
+	"RatePercentageColumn": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='rate'])[2]"
+    },
+	"RatePercentageClickandEnter": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='rate'])[2]//input"
+    },
+	"minTermColumn": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='minTerm'])[2]"
+    },
+	"minTermClickandEnter": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='minTerm'])[2]//input"
+    },
+	"maxTermColumn": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='maxTerm'])[2]"
+    },
+	"maxTermClickandEnter": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='maxTerm'])[2]//input"
+    },
+	"TierColumn": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='tier'])[2]"
+    },
+	"TierClickandSelect": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "(//div[@col-id='tier'])[2]//select"
+    },
+	"SelectVehicles": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[text()='Select Vehicles']"
+    },
+	 "modelYears": {
+            "element_type": "checkbox",
+            "by": "xpath",
+            "id-obj": "//label[@for='2024']"
+        },
+        "make": {
+            "element_type": "checkbox",
+            "by": "xpath",
+            "id-obj": "//label[@for='INEOS']"
+        },
+        "model": {
+            "element_type": "checkbox",
+            "by": "xpath",
+            "id-obj": "//label[@for='Grenadier Station Wagon']"
+        },
+        "selectVehicleRecord": {
+            "element_type": "checkbox",
+            "by": "xpath",
+            "id-obj": "(//span[@class='ag-icon ag-icon-checkbox-unchecked'])[11]"
+        },
+       
+	"Save": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[text()='Save'])[1]"
+    },
+	"Submit": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//div[contains(text(),'12')])[1]/following::div[6]/button"
+    },
+	
+	"Cancel": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[text()='Cancel'])[1]"
+    },
+	"PendingApproval": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "//label[contains(text(),'Pending Approval')]"
+    },
+	"FirstChangeSetID": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "(//div[@class='changeset-id col ng-star-inserted'])[1]"
+    },
+
+	"InProgress": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "//label[contains(text(),'In-Progress')]"
+    },
+	"ManagerApproved": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//label[@for='Manager-Approved'])[1]"
+    },
+	"Reject": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//div[contains(text(),'12')])[1]/following::div[6]/button[1]"
+    },
+	"EditOption": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//p[contains(@class,'mini-edit')])[1]"
+    },
+	"Penicon": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[contains(@class,'edit-icon')])[1]"
+    },
+	"Approve": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//div[contains(text(),'12')])[1]/following::div[6]/button[2]"
+    }
+	
+	
+	
+	
+	
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

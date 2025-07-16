@@ -1,0 +1,1723 @@
+
+ You are a skilled software engineer specializing in test automation. 
+                        Let us go through each step to give an optimized solution.
+                                Your task is to Generate the C# code that would do the following:
+                                Read the Steps list and Generate the following Output C# Files.
+                                step 1. 
+                                Read the below pageobject files,page_file dictionary values,utils files, test_object_variables ,test_case carefully,and Generate the C# code files.
+                                Ensure ,Generate C# files for test_object_variables dictionary keys and the number of generated files should be equal to length of test_object_variables dictionary keys strictly without fail.
+                                the name of files belong to test_object_variables dictionary keys. 
+                                                        
+                                For any function definitions, ensure a proper return statement that accurately reflects the function's purpose and expected output strictly.
+                                Avoid using empty or placeholder returns; always return meaningful values or objects as required.                                
+                                These files should contain the class with the necessary WebElement and driver properties.
+                                For each element defined in the test_object_variables follow test_case Steps_list common functions and their information also. 
+                                These functions should be written based on test_object_variables and test_case Steps_list. 
+                                Generate function for all variables of test_object_variables, which using in test_case Steps_list strictly.
+                                 
+                                create the function for test_case Steps_list,which use functions like click,wait activity,text in this files.
+                                Write a function for variables but synchronize it with another variable and test_case Steps_list according to their definition.
+                                write test_case functionalities common function.
+                                Read the test_case and write test_case common functions as classes, in their respective files.
+                                do not generate function for username,password,login,signin functionalities.
+                                Use the signin,signout,login,logout,dropdown function from Loginpage strictly. Do not use logout variable here. Example: "for logout use 'loginpage.MyAccLogOut'".
+                                Use the common function form GenericHelper, which works for click,wait,validate.
+                                do not generate duplicate code strictly.
+                                Save these files in the folder 'myaccount/PageObjects'. 
+                                                                
+                                step 2. 
+                                Create file based on test_case, and test_object_variables. 
+                                This file should contain the class and method for implementing the test_case steps and their logic. Execute the each Steps which is in Steps_list, and Compare generated output with the Expected_Outputs, if there is difference between Expected_Outputs and generated outputs, generate the correct code which produces the result same as Expected_Outputs. 
+                                Use step 1 generated file, utils and pageobject files in this step to write the code for test_case.
+                                Ensure All verify statements in the test steps, have Assertion.That instead of Assert.IsTrue for validation without fail strictly.
+                                Ensure the assertion has clear, descriptive failure messages to enhance test result readability and debugging.
+                                generate code for all verify statement strictly.
+                                use the page_file dictionary values  class to create function in test_case steps where it is require to use in test_case steps strictly.Example: 'profilepage.EnterCellPhone'.
+                                Use if-else statement  for test_case steps condition strictly and properly.
+                                Use the 'clear' function in generated code where test_case steps mentioned 'clear'.
+                                use the function 'ValidateElementPresentOrNot' to check the condition of displaying or not from GenericHelper.
+                                Read the url variable from BrowserHelper file.
+                                
+                                Use the signin,signout,login,logout,dropdown function from Loginpage strictly. Example: "for logout use 'loginpage.MyAccLogOut'".
+                                Read the account summary function from account summary page.
+                                For login steps,use the login,signin function from Loginpage strictly. Example:'loginpage.LoginEnterUsernameDetails()'.
+                                do not use these login function. Example: loginpage.username(),loginpage.password(),loginpage.signinbutton().
+                                use Acknowledge , ClosePastDuePopup from MyAccountSummaryPage. Example: 'closePastDuePopup()' and 'clickAcknowledgeAndClosePopup()'.
+                                For the common functions in test_case, generate the common function if it is absent from step 1 and pageobject files.    
+                                Use all object variables in only step 1.
+                                Ensure,Generate code for each test_case steps with functionalities in detail strictly.
+                                Ensure number of steps present in the test_case Steps_list are matching with the steps in generated code strictly.
+                                Generate code for each test_case steps strictly.
+                                use function from step 1 generated file for all variable which has function in step 1 output strictly. Example: "maturityModificationPage.GetSplashPageHeaderText()".
+                                do not use generic helper file strictly here.
+                                do not variable value in code strictly.
+                                do not mention 'Additional steps continue here...' strictly and generate full code for all test_case steps strictly.
+                                Step 3. Generate the C# code only; there is no need to explain the code, advantages, and dependencies. 
+                                        mention the step number with their definition in a comment.
+                                step 4. Ensure best practices in C# for readability, maintainability, and efficiency.
+                                step 5. Provide the comments also with code.
+                                step 6. Use libraries in each file.
+                                
+                                step 7. Ensure generate code for every steps in test_case steps list strictly.
+                                step 8. do not mention any notes,step,explanations.                                
+                                        
+                                                                                                                                                              
+                                Expected Output : 
+                                            
+                                The input for the prompt would be:
+                                A) test_case:
+                                1.Titles: my_impersonate_error
+                                2.Steps_list: Step 1 open MyAccount on Stage
+ for Santander accounts: https://myaccountadmin-staging.app.corpint.net/
+
+Step 2 Select Username from SearchBy dropdown
+Step 3 Enter Username  from the Datos sheet and click on Search button
+
+Step 4 Click on Imparsonate button
+Step 5 Verify TokenValidation displayed string as "Token Validation"
+Step 6 Copy Second factor token  and click on Authenticate button 
+Step 7 Verify PleaseEnterToken displayed string as "Please enter token to impersonate customer"
+Step 8 Paste the text from Second factor token to  and click login button
+Step 9 Close past due popup id visible
+Step 10 Verify account summary header displayed string as "Account Summary" on account summary page
+Step 11 Click on Account profile
+Step 12 Verify primary address text is displayed string as "Primary Address"
+Step 13 Enter Mailing Address, city, state, zipcode from detos file
+Step 14 Enter Cellphone number from detos file
+Step 15 If cellphone is already exist, then click on edit
+Clear the existing cellphone number and enter new from detos file
+And click update
+Step 16 Enter Email address from detos file
+Step 17 Select statement prerence as "Electronics"
+Step 18 Click on Email preferance and select account related emails
+Step 19 Click on Sms preferance and select Pramotion  & special offers
+Step 20 Click on Save button
+Step 21 Verify Error message as "The action is not allowed while impersonating a customer."
+Step 22 Click on back to account summary button
+Step 23 Click yes button on Do you want to leave page popup
+Step 24 Click on VehicleAndClaim button
+Step 25 Verify VehicleInfo text
+Step 26 Click GarageAddress link
+Step 27 Verify garageaddressText displayed as "Garage Address"
+Step 28 Enter details in address, city, state and zipcode inputtext and click on save button
+Step 29 Verify Error message as "The action is not allowed while impersonating a customer."
+Step 30 Click on UserDropDown on the top right corner 
+Step 31 Click on Signout  
+                                3.Expected_Outputs: able to open account on MyAccount
+
+Username should be selected
+User details must be fetched sucessfully
+User should click imparsonate button
+Verified TokenValidation displayed as mentioned
+Second factor token should be copied
+Verified PleaseEnterToken displayed as mentioned
+Text should be pasted in
+past due popup closed
+Verified account summary header displayed as mentioned
+Account profile link is clicked
+Verified primary address text is displayed as mentioned
+Entered Mailing Address, city, state, zipcode from detos file
+Entered Cellphone number from detos file
+User should be able to update cellphone number
+Entered Email address from detos file
+Statement preferance should be selected
+Account related emails should be selected
+Pramotion  & special offers should be selected
+Clicked on save button
+verified Error message  displayed as mentioned
+clicked back to account summary 
+clicked yes button
+Clicked VehicleAndClaim button
+Verified vehicleinfo text displayed as mentioned
+Clicked garageaddress link
+Verified garageaddresstext displayed as mentioned
+Details entered
+Error message verified
+UserDropDown must be clicked
+Signout is clicked               
+                                
+                                B) test_object_variables:{'MyAccountAdminPage': {'username': {'element_type': 'inputtext', 'by': 'xpath', 'id-obj': "//input[@data-bind='value: searchCriteria']"}, 'searchby': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//select[@id='type']"}, 'imparsonate': {'element_type': 'button', 'by': 'id', 'id-obj': 'btnImmpersonate'}, 'TokenValidation': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//span[@class='subtitle']"}, 'secondFactorTocken': {'element_type': 'inputtext', 'by': 'xpath', 'id-obj': " //div[@id='AdminLogin']//input[2]"}, 'authenticate': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//button[@class='btn btn-success']"}, 'PleaseEnterToken': {'element_type': 'text', 'by': 'xpath', 'id-obj': 'SecondToken'}, 'secondToken': {'element_type': 'link', 'by': 'id', 'id-obj': 'SecondToken'}, 'Login': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//button[@class='btn btn-success-icon btn-login']"}}, 'MyAccountSummaryPage': {'Account_summary_header': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//*[@id='accountSummaryPage']/h1/span[2]"}, 'accountProfile': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//li[@class='menu-item account-profile']"}, 'VehicleAndClaimButton': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//button[@class='btn btn-summary-round' and @data-navto='/Account/vehicle']"}}, 'MyAccountProfilePage': {'primaryAddressText': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//h3[contains(text(),'Primary Address')]"}, 'MailingAddress': {'element_type': 'text', 'by': 'id', 'id-obj': 'm-address'}, 'City': {'element_type': 'text', 'by': 'id', 'id-obj': 'm-city'}, 'State': {'element_type': 'text', 'by': 'id', 'id-obj': 'm-state'}, 'ZipCode': {'element_type': 'text', 'by': 'id', 'id-obj': 'm-zip-code'}, 'CellPhone': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'profile-phone'}, 'EditCellPhone': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//span[@class='fa fa-pencil']"}, 'UpdateButtun': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//a[@class='small button active' and contains(text(),'Update')]"}, 'EmailAddress': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'email-address'}, 'StmtPreferanceElectronic': {'element_type': 'label', 'by': 'xpath', 'id-obj': "//label[@for='statement-electronic']"}, 'EmailPrefenrance': {'element_type': 'button', 'by': 'xpath', 'id-obj': "(//span[@class='fa fa-chevron-right fa-2x'])[1]"}, 'AccountRelatedEmail': {'element_type': 'button', 'by': 'xpath', 'id-obj': "(//span[@class='fa fa-check-square fa-2x active'])[1]"}, 'SmsPrefenrance': {'element_type': 'button', 'by': 'xpath', 'id-obj': "(//span[@class='fa fa-chevron-right fa-2x'])[2]"}, 'Promotion&SpecialOffer': {'element_type': 'button', 'by': 'xpath', 'id-obj': "(//span[@class='fa fa-square fa-2x inactive'])[4]"}, 'Save': {'element_type': 'button', 'by': 'id', 'id-obj': 'profile-save-btn'}, 'imparsonate_error': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//*[contains(text(),'action is not allowed while impersonating')]"}, 'backToAccSummaryLink': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//p[contains(text(),'Back to Account Summary')]"}, 'DoYouWantToLeaveButton_Yes': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//a[@class='small button active confirm-modal-button']"}}, 'MyAccountVehiclePolicyPage': {'VehicleInfo_header': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//h1[contains(text(),'Vehicle Info')]"}, 'GarageAdrressLink': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//div[@class='vcard']//div[@class='fn']"}, 'GarageAddressText': {'element_type': 'Text', 'by': 'xpath', 'id-obj': "//h2[contains(text(),'Garage Address')]"}, 'AddressInputText': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'garage-street1'}, 'CityInputText': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'garage-city'}, 'StateDropdown': {'element_type': 'dropdown', 'by': 'id', 'id-obj': 'garage-state'}, 'ZipCodeInputText': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'garage-zipcode'}, 'SaveButton': {'element_type': 'Button', 'by': 'xpath', 'id-obj': "//a[@class='button btn-block save-form' and @href='#garage-address']"}, 'imparsonate_error': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//*[contains(text(),'action is not allowed while impersonating')]"}}, 'UserDropDown': {'element_type': 'dropdown', 'by': 'xpath', 'id-obj': "//*[@id='menu-secondary']/li[6]/a/span[2]"}, 'Signout': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//*[@id='menu-secondary']/li[6]/ul/li[4]/a"}, 'Signout_message': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//*[contains(text(),'You are now signed out')]"}}
+                                
+                                                
+                                C) utils:
+                                1. GenericHelper: using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Model;
+using log4net;
+using log4net.Repository.Hierarchy;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+
+namespace MyAccount.Utils
+{
+    public class GenericHelper(IWebDriver driver)
+    {
+
+        public WebDriverWait GetWebdriverWait(TimeSpan timeout)
+        {
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(2));
+            WebDriverWait wait = new WebDriverWait(driver, timeout)
+            {
+                PollingInterval = TimeSpan.FromMilliseconds(500),
+            };
+            wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(ElementNotVisibleException));
+            Console.WriteLine("Wait Object Created ");
+            return wait;
+        }
+
+        public void WaitForWebElementToBeClickable(By locator, TimeSpan timeout)
+        {
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(1));
+            //Console.WriteLine(" Setting the Explicit wait to 1 sec ");
+            var wait = GetWebdriverWait(timeout);
+            wait.Until(ExpectedConditions.ElementToBeClickable(locator));
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(5000));
+            //Console.WriteLine(" Setting the Explicit wait Configured value ");
+            // return null;
+        }
+
+        public void clickOn(IWebElement webElement, string field)
+        {
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+            try
+            {
+                webElement.Click();
+                Console.WriteLine("Clicked on " + field);
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+                Thread.Sleep(1000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+
+        public void sendKeys(IWebElement webElement, string message, string field)
+        {
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(40));
+            webElement.SendKeys(message);
+            Console.WriteLine("Entered input in " + field + " as : " + message);
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+        }
+
+        public void waitForElement(IWebElement element)
+        {
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(180));
+            wait.Until(driver => ExpectedConditions.ElementToBeClickable(element));
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+        }
+
+        public void selectValueFromDropdown(IWebElement element, int index)
+        {
+            SelectElement select = new SelectElement(element);
+            select.SelectByIndex(index);
+            Console.WriteLine("Selected " + index + " index from Dropdown");
+        }
+
+        public void ValidateElementPresentOrNot(IWebElement element, string field)
+        {
+            if (element.Displayed)
+            {
+                Console.WriteLine(field+" displayed");
+            }
+            else
+            {
+                Console.WriteLine(field+" not displayed");
+            }
+
+        }
+
+        public void waitForElementToBeVisible(IWebElement element, string textToBeVisible)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(driver => ExpectedConditions.TextToBePresentInElement(element,textToBeVisible));
+            wait.Until(driver => element.Displayed);
+        }
+    }
+}
+
+                                2. BrowserHelper: ﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium;
+
+namespace MyAccount.Utils
+{
+    public class BrowserHelper
+    {
+        public IWebDriver driver;
+        public string appUrl;
+        public string environment;
+        public string platform;
+
+        [OneTimeSetUp]
+        public void SetupReporting()
+        {
+            ExtentReporterHelper.SetupReporting();
+        }
+
+        [SetUp]
+        public void Setup()
+        {
+            string browser = TestContext.Parameters.Get("browser", "chrome");
+            appUrl = TestContext.Parameters.Get("appUrl", "https://www.google.com");
+            environment = TestContext.Parameters.Get("environment", "test");
+            platform = TestContext.Parameters.Get("platform", "Windows");
+
+            string driverPath = TestContext.CurrentContext.TestDirectory;
+
+            switch (browser?.ToLower())
+            {
+                case "chrome":
+                    driver = new ChromeDriver(driverPath);
+                    Console.WriteLine("Chrome is the browser selected for this test execution");
+                    break;
+                case "firefox":
+                    driver = new FirefoxDriver(driverPath);
+                    break;
+                case "edge":
+                    driver = new EdgeDriver(driverPath);
+                    break;
+                default:
+                    driver = new ChromeDriver(driverPath);
+                    break;
+            }
+            //ExtentReporterHelper.SetupReporting(driver);
+            driver.Manage().Window.Maximize();
+            ExtentReporterHelper.CreateTest(TestContext.CurrentContext.Test.Name);
+        }
+
+        [TearDown]
+        public void Teardown()
+        {
+            if (driver != null)
+            {
+                driver.Quit();
+                driver.Dispose();
+            }
+
+            var status = TestContext.CurrentContext.Result.Outcome.Status;
+            var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace) ? "" : TestContext.CurrentContext.Result.StackTrace;
+
+            ExtentReporterHelper.LogTestResult(status, stacktrace);
+            ExtentReporterHelper.Flush();
+        }
+    }
+}
+
+                                3. DatabaseHelper: ﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyAccount.Utils
+{
+    public class DataBaseHelper
+    {
+        //public bool fetchValuesFromDB(string sql)
+        //{
+        //    SqlCommand comm = new SqlCommand();
+        //    bool recordFound = false;
+        //    Dictionary<string, object> objResults = new Dictionary<string, object>();
+
+        //    comm.Connection = new SqlConnection("Data Source=" + TestContext.Parameters.Get("webDBServer") + ";  Trusted_Connection=Yes"); //Windows Authentication
+        //    comm.CommandText = sql;
+        //    comm.Connection.Open();
+        //    Console.WriteLine("State: {0}", comm.Connection.State);
+        //    Console.WriteLine("ConnectionTimeout: {0}", comm.Connection.ConnectionTimeout);
+        //    SqlDataReader cursor = comm.ExecuteReader();
+        //    var columns = new List<string>();
+
+        //    for (int i = 0; i < cursor.FieldCount; i++)
+        //    {
+        //        columns.Add(cursor.GetName(i));
+        //    }
+
+        //    if (cursor.HasRows)
+        //    {
+        //        recordFound = true;
+        //        while (cursor.Read())
+        //        {
+        //            for (int i = 0; i < columns.Count; i++)
+        //            {
+        //                if (!objResults.ContainsKey(cursor.GetName(i)))
+        //                {
+        //                    objResults.Add(cursor.GetName(i), cursor[columns[i]].ToString());
+        //                }
+        //            }
+        //        }
+        //    }
+        //    comm.Connection.Close();
+        //    return recordFound;
+        //}
+
+        public Dictionary<string, object> fetchValuesFromDB(string sql)
+        {
+            bool recordFound = false;
+            Dictionary<string, object> objResults = new Dictionary<string, object>();
+
+            using (SqlConnection connection = new SqlConnection("Data Source=" + TestContext.Parameters.Get("ServicingDBServer") + "; Trusted_Connection=Yes"))
+            {
+                using (SqlCommand comm = new SqlCommand(sql, connection))
+                {
+                    Console.WriteLine("Connection is going to be established");
+                    connection.Open();
+                    Console.WriteLine("State: {0}", connection.State);
+                    Console.WriteLine("ConnectionTimeout: {0}", connection.ConnectionTimeout);
+
+                    using (SqlDataReader cursor = comm.ExecuteReader())
+                    {
+                        var columns = new List<string>();
+                        for (int i = 0; i < cursor.FieldCount; i++)
+                        {
+                            columns.Add(cursor.GetName(i));
+                        }
+
+                        if (cursor.HasRows)
+                        {
+                            recordFound = true;
+                            while (cursor.Read())
+                            {
+                                foreach (var column in columns)
+                                {
+                                    if (!objResults.ContainsKey(column))
+                                    {
+                                        
+                                        objResults.Add(column, cursor[column].ToString());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return objResults;
+        }
+
+    }
+}
+
+                                4. Extendassert: ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
+using NUnit.Framework;
+using NUnit.Framework.Constraints;
+using OpenQA.Selenium;
+using System;
+using System.Diagnostics;
+using System.Reflection;
+
+
+namespace MyAccount.Utils
+{
+    public class ExtendAssert
+    {
+        public static class Assertion
+        {
+            public static void That<TActual>(IWebDriver driver, TActual actual, IResolveConstraint expression, string failureMessage = null, string successMessage = null)
+            {
+                try
+                {
+                    Assert.That(actual, expression, failureMessage);
+                    if (!string.IsNullOrEmpty(successMessage))
+                    {
+                        Console.WriteLine($"Assertion is successful : {successMessage}");
+                        ExtentReporterHelper.LogCustomAssertSuccess($"Assertion Passed: {successMessage}", ExtentReporterHelper.CaptureScreenshot(driver));
+                    }
+                }
+                catch (AssertionException)
+                {
+                    if (!string.IsNullOrEmpty(failureMessage))
+                    {
+                        Console.WriteLine($"Assertion is unsuccessful : {failureMessage}");
+                        ExtentReporterHelper.LogCustomAssertFailure($"Assertion Failed: {successMessage}", ExtentReporterHelper.CaptureScreenshot(driver));
+                    }
+                    throw;
+                }
+                finally
+                {
+                    string testCaseId = GetTestCaseIdFromCaller();
+                    if (!string.IsNullOrEmpty(testCaseId))
+                    {
+                        Console.WriteLine($"Test Case ID: {testCaseId}");
+                    }
+                }
+            }
+            private static string GetTestCaseIdFromCaller()
+            {
+                var stackTrace = new StackTrace();
+                var method = stackTrace.GetFrame(2).GetMethod();
+                var attributes = method.GetCustomAttributes(typeof(PropertyAttribute), false);
+                foreach (PropertyAttribute attribute in attributes)
+                {
+                    if (attribute.Properties.ContainsKey("TestCaseID"))
+                    {
+                        var testCaseId = attribute.Properties["TestCaseID"];
+                        if (testCaseId is IList<object> list && list.Count > 0)
+                        {
+                            return list[0].ToString();
+                        }
+                        return testCaseId.ToString();
+                    }
+                }
+                return null;
+            }
+        }
+    }
+}
+
+                                5. ExtendReportHelper: ﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
+using System.Runtime.InteropServices;
+
+namespace MyAccount.Utils
+{
+    public static class ExtentReporterHelper
+    {
+        private static ExtentReports extent;
+        private static ExtentTest test;
+
+        public static void SetupReporting(string reportPath = "Spark.html")
+        {
+            var sparkReporter = new ExtentSparkReporter(reportPath);
+            extent = new ExtentReports();
+            extent.AttachReporter(sparkReporter);
+            extent.AddSystemInfo("Operating System", GetOperatingSystemInfo());
+            extent.AddSystemInfo("Browser", TestContext.Parameters.Get("browser", "chrome"));
+        }
+
+        public static void CreateTest(string testName)
+        {
+            test = extent.CreateTest(testName);
+        }
+
+        public static void LogTestResult(NUnit.Framework.Interfaces.TestStatus status, string stacktrace = "")
+        {
+            Status logstatus;
+
+            switch (status)
+            {
+                case NUnit.Framework.Interfaces.TestStatus.Failed:
+                    logstatus = Status.Fail;
+                    test.Log(logstatus, "Test ended with " + logstatus + " – " + stacktrace);
+                    break;
+                case NUnit.Framework.Interfaces.TestStatus.Skipped:
+                    logstatus = Status.Skip;
+                    test.Log(logstatus, "Test ended with " + logstatus);
+                    break;
+                default:
+                    logstatus = Status.Pass;
+                    test.Log(logstatus, "Test ended with " + logstatus);
+                    break;
+            }
+        }
+
+        public static string CaptureScreenshot(IWebDriver driver)
+        {
+            ITakesScreenshot ts = (ITakesScreenshot)driver;
+            Screenshot screenshot = ts.GetScreenshot();
+            string screenshotPath = $"Screenshots\\screenshot_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+            string screenshotDirectory = Path.Combine(TestContext.CurrentContext.TestDirectory, "Screenshots");
+            if (!Directory.Exists(screenshotDirectory))
+            {
+                Directory.CreateDirectory(screenshotDirectory);
+            }
+            screenshot.SaveAsFile(screenshotPath);
+            return screenshotPath;
+        }
+
+        public static string FormatBold(string message)
+        {
+            return $"<b>{message}</b>";
+        }
+
+        public static void LogCustomAssertSuccess(string message, string screenshotPath)
+        {
+            test.Log(Status.Pass, message, MediaEntityBuilder.CreateScreenCaptureFromPath(screenshotPath).Build());
+        }
+
+        public static void LogCustomAssertFailure(string message, string screenshotPath)
+        {
+            test.Log(Status.Fail, FormatBold(message), MediaEntityBuilder.CreateScreenCaptureFromPath(screenshotPath).Build());
+        }
+
+        private static string GetOperatingSystemInfo()
+        {
+            return RuntimeInformation.OSDescription;
+        }
+
+        public static void Flush()
+        {
+            extent.Flush();
+        }
+    }
+}
+
+
+
+                                D) pageobjects:
+                                1. MyAccountSummaryPage: ﻿using log4net;
+using MyAccount.Utils;
+using OpenQA.Selenium;
+using System;
+
+namespace MyAccount.PageObjects
+{
+    public class MyAccountSummaryPage
+    {
+        private IWebDriver driver;
+        private GenericHelper genericHelper;
+
+        public MyAccountSummaryPage(IWebDriver driver)
+        {
+            this.driver = driver;
+            this.genericHelper = new GenericHelper(driver);
+        }
+
+        public IWebElement AccountSummaryHeader => driver.FindElement(By.XPath("//h1//span[contains(text(),'Account Summary')]"));
+        public IWebElement pastduepopup => driver.FindElement(By.XPath("//button[@data-click='closePastDueModal']//i"));
+        public IWebElement UserDropDown => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/a/span[2]"));
+        public IWebElement LogOut => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/ul/li[4]/a"));
+        public IWebElement AcknowledgePopupBtn => driver.FindElement(By.XPath("//button[contains(text(),'Acknowledge')]"));
+        public IWebElement closeBtnAfterAcknowledgePopup => driver.FindElement(By.XPath("//button[@data-bind='click: closeEstatementAcknowlegeModal']"));
+        public IWebElement ViewOptionsButton => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']//div/button[contains(text(),'View Options')]"));
+        public IWebElement ViewOptionVerbiage => driver.FindElement(By.XPath("//span[@class='info-title mat-mod-text']"));
+        public IWebElement VerbageMessage => driver.FindElement(By.XPath("//p[@class='alert-message' and contains(text(),'You have been enrolled in paperless statements')]"));
+        public IWebElement ContactInformationLink => driver.FindElement(By.XPath("//p[@class='alert-message']//a[@href='/Profile/Personal?updateProfile=true']"));
+        public IWebElement ClickHereLink => driver.FindElement(By.XPath("//p[@class='alert-message']//a[contains(text(),'click here')]"));
+        public IWebElement UpdatePreferenceHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'Update your statement preferences')]"));
+        public IWebElement UsePaperRadioButton => driver.FindElement(By.XPath("//label[@for='statement-paper']"));
+        public IWebElement SubmitButton => driver.FindElement(By.XPath("//button[@type='submit']"));
+        public IWebElement PastDueAmount => driver.FindElement(By.XPath("//div[@class='col-xs-4']//span[@data-bind='currencyText: AmountDue']"));
+        public IWebElement PopupHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'We have switched your account to eÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœstatements!')]"));
+        public int pastduepopupCount => driver.FindElements(By.XPath("//button[@data-click='closePastDueModal']//i")).Count;
+        public int AcknowledgePopupCount => driver.FindElements(By.XPath("//div[@id='estatement-acknowledge-modal' and contains(@style,'block')]//button[contains(text(),'Acknowledge')]")).Count;
+        public IWebElement AmountVerbiageQuestionMark => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']/div[3]/div[1]/div/div[4]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div/span[1]/a"));
+        public IWebElement AmountVerbiage => driver.FindElement(By.XPath("//span[@class='info-title' and contains(text(),'Amount Due')]//a"));
+        public IWebElement ViewMoreOptions => driver.FindElement(By.XPath("//button[contains(text(),'View more options')]"));
+        public IWebElement AcknowledgePopupHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'We have switched your account to eÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœstatements!')]"));
+        public IWebElement AcknowledgeButton => driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"));
+        public IWebElement ThankYouMessage => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'Thank you!')]"));
+        public IWebElement SubmitButtonForStatementPreferance => driver.FindElement(By.XPath("//button[@data-bind='click: updateCommunicationPreferences']"));
+        public IWebElement PastDuePopupHeader => driver.FindElement(By.XPath("//h2[@class='h5' and contains(text(),'multiple accounts currently past due')]"));
+        public IWebElement VehicleDropdown => driver.FindElement(By.XPath("//div[@data-bind='visible: multipleAccounts']//div[@class='select-dropdown-heading']"));
+        public IWebElement Vehicle1 => driver.FindElement(By.XPath("(//div[@class='select-dropdown-container'])[1]"));
+        public IWebElement Vehicle2 => driver.FindElement(By.XPath("(//div[@class='select-dropdown-container'])[2]"));
+        public IWebElement VehicleAndInsurance => driver.FindElement(By.XPath("//button[@class='btn btn-summary-round' and contains(text(),'Vehicle and Insurance')]"));
+        public IWebElement YearMakeModel => driver.FindElement(By.XPath("//span[@data-bind='text: vehicleYearMakeModel']"));
+        public IWebElement securityUpdates => driver.FindElement(By.XPath("//*[@id='loginSecurity']/div/div/div"));
+        public IWebElement VehicleAndClaimButton => driver.FindElement(By.XPath("//button[@class='btn btn-summary-round' and @data-navto='/Account/vehicle']"));
+        public IWebElement DoYouWantLeaveYesButton => driver.FindElement(By.XPath("//a[@class='small button active confirm-modal-button']"));
+        public IWebElement TransactionHistory => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']/div[2]/div[3]/div/div/div[4]/div[3]/div[3]/div[5]/div/a"));
+        public IWebElement LogoutMessage => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/ul/li[4]/a"));
+        public IWebElement AccountProfileLink => driver.FindElement(By.XPath("//li[@class='menu-item account-profile']"));
+
+        public string getsecurityUpdatesHeader()
+        {
+            genericHelper.waitForElement(securityUpdates);
+            return securityUpdates.Text;
+        }
+
+        public void ValidatePopupHeaderDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(AcknowledgePopupHeader, "Popup Header");
+        }
+
+        public string GetPopupHeaderText()
+        {
+            genericHelper.waitForElement(PopupHeader);
+            return PopupHeader.Text;
+        }
+
+        public void ClickAcknowledgeButton()
+        {
+            genericHelper.clickOn(AcknowledgeButton, "Acknowledge Button");
+        }
+
+        public void ValidateThankYouMessageDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(ThankYouMessage, "Thank You Message");
+        }
+
+        public void ValidateVerbageMessageDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(VerbageMessage, "Verbage Message");
+        }
+
+        public void ClickContactInformationLink()
+        {
+            genericHelper.clickOn(ContactInformationLink, "Contact Information Link");
+        }
+
+        public void ClickClickHereLink()
+        {
+            genericHelper.clickOn(ClickHereLink, "Click Here Link");
+        }
+
+        public void ValidateUpdatePreferenceHeaderDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(UpdatePreferenceHeader, "Update Preference Header");
+        }
+
+        public void ClickUsePaperRadioButton()
+        {
+            genericHelper.clickOn(UsePaperRadioButton, "Use Paper Radio Button");
+        }
+
+        public void ClickSubmitButton()
+        {
+            genericHelper.clickOn(SubmitButton, "Submit Button");
+        }
+
+        public bool closePastDuePopup()
+        {
+            genericHelper.waitForElement(pastduepopup);
+            if (pastduepopup.Displayed)
+            {
+                IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+                executor.ExecuteScript("arguments[0].click();", pastduepopup);
+                Console.WriteLine("Past Due Popup is visible and closed successfully");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Past Due pop up is not visible");
+                return false;
+            }
+        }
+
+        public string getAccountSummaryHeaderText()
+        {
+            genericHelper.waitForElement(AccountSummaryHeader);
+            return AccountSummaryHeader.Text;
+        }
+
+        public string GetPastDueAmountText()
+        {
+            genericHelper.waitForElement(PastDueAmount);
+            return PastDueAmount.Text;
+        }
+
+        public string GetPastDuePopupHeaderText()
+        {
+            genericHelper.waitForElement(PastDuePopupHeader);
+            return PastDuePopupHeader.Text;
+        }
+
+        public string GetAccountSummaryHeaderText()
+        {
+            genericHelper.waitForElement(AccountSummaryHeader);
+            return AccountSummaryHeader.Text;
+        }
+
+        public bool clickAcknowledgeAndClosePopup()
+        {
+            Thread.Sleep(2000);
+            genericHelper.GetWebdriverWait(TimeSpan.FromSeconds(5));
+            genericHelper.waitForElement(AcknowledgePopupBtn);
+            if (AcknowledgePopupBtn.Displayed)
+            {
+                genericHelper.clickOn(AcknowledgePopupBtn, "Acknowledge");
+                if (AcknowledgePopupBtn.Displayed)
+                {
+                    genericHelper.clickOn(AcknowledgePopupBtn, "Acknowledge");
+                }
+                genericHelper.clickOn(closeBtnAfterAcknowledgePopup, "Close Button After Acknowledge");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Acknowledge popup is not visible");
+                return false;
+            }
+        }
+
+        public void ClickUserDropDown()
+        {
+            genericHelper.clickOn(UserDropDown, "User DropDown");
+        }
+
+        public void MouseHoverOnAmountDueQuestionMark()
+        {
+            genericHelper.waitForElement(AmountVerbiageQuestionMark);
+            genericHelper.clickOn(AmountVerbiageQuestionMark, "Amount Due Question Mark");
+        }
+
+        public string GetAmountVerbiageText()
+        {
+            genericHelper.waitForElement(AmountVerbiage);
+            genericHelper.clickOn(AmountVerbiageQuestionMark, "Amount Due Question Mark");
+            return AmountVerbiage.GetAttribute("data-original-title");
+        }
+
+        public void ClickViewOptionsButton()
+        {
+            genericHelper.clickOn(ViewOptionsButton, "View Options Button");
+        }
+
+        public void ClickViewMoreOptionsButton()
+        {
+            genericHelper.clickOn(ViewMoreOptions, "View More Options Button");
+        }
+
+        public string GetViewOptionVerbiageText()
+        {
+            genericHelper.waitForElement(ViewOptionVerbiage);
+            return ViewOptionVerbiage.Text;
+        }
+
+        public void ValidateViewOptionsButtonDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(ViewOptionsButton, "View Options Button");
+        }
+
+        public string GetUpdatePreferenceHeaderText()
+        {
+            genericHelper.waitForElement(UpdatePreferenceHeader);
+            return UpdatePreferenceHeader.Text;
+        }
+
+        public void SelectUsePaperRadioButton()
+        {
+            genericHelper.clickOn(UsePaperRadioButton, "Use Paper Radio Button");
+        }
+
+        public void ClickSubmitButtonForStatementPreferance()
+        {
+            genericHelper.clickOn(SubmitButtonForStatementPreferance, "Submit Button");
+        }
+
+        public string GetPopupHeaderAcknowledgeText()
+        {
+            genericHelper.waitForElement(AcknowledgePopupHeader);
+            return AcknowledgePopupHeader.Text;
+        }
+
+        public string GetThankYouMessageText()
+        {
+            Thread.Sleep(1000);
+            genericHelper.waitForElement(ThankYouMessage);
+            return ThankYouMessage.Text;
+        }
+
+        public void CloseThankYouPupupAfterAcknowledge()
+        {
+            genericHelper.waitForElement(closeBtnAfterAcknowledgePopup);
+            genericHelper.clickOn(closeBtnAfterAcknowledgePopup, "Close Button After Acknowledge");
+        }
+
+        public void ClickVehicleDropdown()
+        {
+            genericHelper.clickOn(VehicleDropdown, "Vehicle Dropdown");
+        }
+
+        public void ClickFirstVehicle()
+        {
+            genericHelper.clickOn(Vehicle1, "First Vehicle");
+        }
+
+        public void ClickSecondVehicle()
+        {
+            genericHelper.clickOn(Vehicle2, "Second Vehicle");
+        }
+
+        public void ClickVehicleAndInsurance()
+        {
+            genericHelper.clickOn(VehicleAndInsurance, "Vehicle and Insurance");
+        }
+
+        public string GetYearMakeModelText()
+        {
+            genericHelper.waitForElement(YearMakeModel);
+            return YearMakeModel.Text;
+        }
+
+        public void ValidateYearMakeModelDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(YearMakeModel, "Year Make Model");
+        }
+
+        public void ClickVehicleAndClaimButton()
+        {
+            genericHelper.clickOn(VehicleAndClaimButton, "Vehicle And Claim Button");
+        }
+
+        public void ClickDoYouWantToLeavePageYesButton()
+        {
+            genericHelper.clickOn(DoYouWantLeaveYesButton, "Do You Want To Leave YesButton");
+        }
+
+        public void ClickTransactionHistory()
+        {
+            genericHelper.clickOn(TransactionHistory, "Transaction History");
+        }
+
+        public void ValidateLogoutMessage(string expectedMessage)
+        {
+            string actualMessage = LogoutMessage.Text;
+            ExtendAssert.Assertion.That(driver, actualMessage, Is.EqualTo(expectedMessage),
+                $"Logout message did not match. Expected: {expectedMessage}, Actual: {actualMessage}",
+                $"Logout message matched. Expected: {expectedMessage}, Actual: {actualMessage}");
+        }
+
+        public void ClickAccountProfileLink()
+        {
+            genericHelper.clickOn(AccountProfileLink, "Account Profile Link");
+        }
+    }
+}
+                                2. Loginpage: ﻿using log4net;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
+using Microsoft.VisualStudio.TestPlatform.PlatformAbstractions.Interfaces;
+using MyAccount.Utils;
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyAccount.PageObjects
+{
+    public class LoginPage(IWebDriver driver)
+    {
+        MyAccountSummaryPage accountSummaryPage = new MyAccountSummaryPage(driver);
+        MaturityModificationPage matmodPage = new MaturityModificationPage(driver);
+        GenericHelper genericHelper = new GenericHelper(driver);
+
+        public static string AccountId;
+    //    public static string username;
+
+
+        public IWebElement UserName => driver.FindElement(By.Id("username"));
+        public IWebElement Password => driver.FindElement(By.Id("password"));
+        public IWebElement SignInButton => driver.FindElement(By.XPath("//*[@id='form-sign-in']/button"));
+        public IWebElement ErrorMessage => driver.FindElement(By.XPath("//*[@id='form-sign-in']/div[11]/p/text()[1]"));
+        public IWebElement DisableErrorMessage => driver.FindElement(By.XPath("//*[@id='form-sign-in']//*[contains(text(),'Your account has been disabled')]"));
+        
+        int loginerror = driver.FindElements(By.XPath("//div[@class='ko-error-message' and contains(text(),'combination you have entered does not match')]")).Count ;
+        public IWebElement RememberUsernameCheckbox => driver.FindElement(By.XPath("//*[@id='rememberdevice']"));
+        public IWebElement AccountSummaryHeader => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']/h1/span[2]"));
+        public IWebElement AcknowledgeButton => driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"));
+        public IWebElement PastDuePopupCloseButton => driver.FindElement(By.XPath("//button[@class='close']//i[@class='bi bi-x']"));
+        public IWebElement LogoutButton => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/ul/li[4]/a"));
+        public IWebElement GoToSignInButton => driver.FindElement(By.XPath("//*[contains(text(),'Go to Sign-In')]"));
+        public IWebElement LendingClubBanner => driver.FindElement(By.XPath("//*[@id='myaccount-signin-levi']/div/div/h2"));
+
+
+        // Methods
+        public void EnterUsername(string username)
+        {
+            genericHelper.waitForElement(UserName);
+            UserName.Clear();
+            genericHelper.sendKeys(UserName, username, "Username Field");
+        }
+
+        public void EnterEmailAddress(string EmailId)
+        {
+            genericHelper.waitForElement(UserName);
+            UserName.Clear();
+            genericHelper.sendKeys(UserName, EmailId, "Username Field");
+        }
+
+        public void EnterPassword(string password)
+        {
+            genericHelper.waitForElement(Password);
+            Password.Clear();
+            genericHelper.sendKeys(Password, password, "Password Field");
+        }
+
+        public void ClickRememberUsernameCheckbox()
+        {
+            genericHelper.clickOn(RememberUsernameCheckbox, "Remember Username Checkbox");
+        }
+
+        public void ClickGoToSignInButton()
+        {
+            genericHelper.waitForElement(GoToSignInButton);
+            genericHelper.clickOn(GoToSignInButton, "Go to Sign-in Button");
+        }
+        
+        
+        public void ClickSignIn()
+        {
+            //This function is used to click on sign-in button
+
+            SignInButton.Click();
+            Console.WriteLine("SignIn is Clicked");
+            Thread.Sleep(5000);
+            //  GenericHelper.WaitForWebElementInPage(AccountSummaryTitlel, TimeSpan.FromSeconds(5000));
+        }
+
+        public void MyAccLoginInvalid()
+        {
+            //This function is build for testing purpose to test with hard coded data
+
+            Random rnd = new Random();
+            UserName.Clear();
+            genericHelper.sendKeys(UserName, "ffmXXXXXXXXXXXX_17203583", "Username");
+            //UserName.SendKeys("HappyGuy_" + rnd.Next(0, 100));
+            Password.Clear();
+         //   genericHelper.sendKeys(Password,"password", "Password");
+            Password.SendKeys("password");
+            ClickSignIn();
+
+        }
+
+        public string GetErrorMessageText()
+        {
+            genericHelper.waitForElement(ErrorMessage);
+            return ErrorMessage.Text;
+        }
+
+        public void MyAccLogOut()
+        {
+            //This function is used to Logout from MyAccount
+
+            //accountSummaryPage = new MyAccountSummaryPage(driver);
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(90));
+            accountSummaryPage.UserDropDown.Click();
+            Console.WriteLine("Userdropdown is Clicked on Account summary page");
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+            accountSummaryPage.LogOut.Click();
+            Console.WriteLine("Logout button is clicked");
+            driver.Manage().Timeouts().ImplicitWait = (TimeSpan.FromSeconds(60));
+
+        }
+
+        public void MyAccLoginWithExistingUser()
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            UserName.Clear();
+           // UserName.SendKeys(username);
+            genericHelper.sendKeys(UserName,Variables.username,"Username");
+            Password.Clear();
+            Password.SendKeys("password");
+            genericHelper.clickOn(SignInButton, "SignIn Button");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+        }
+
+        public void LoginEnterUsernameDetails()
+        {
+            //This function is used to login to MyAccount with query
+
+            SignUpPage signUpPage = new SignUpPage(driver);
+            MyAccountSummaryPage accountSummaryPage = new MyAccountSummaryPage(driver);
+            GenericHelper genHelper = new GenericHelper(driver);
+            DataBaseHelper dbHelper = new DataBaseHelper();
+            string squery;
+            int i = 0;
+            do
+            {
+                genHelper.clickOn(signUpPage.SantanderLinkonSignUpPage, "Santander Link on SignUp");
+
+                string brand = TestContext.Parameters.Get("Brand", "Scusa");
+                string brandCondition = brand.Equals("Scusa") ? "SCUSA" : "Chrysler Capital";
+                string financeType = brand.Equals("CCLease") ? "Lease" : "Retail";
+
+                /*
+                squery = $@"
+                USE Servicing
+                SELECT TOP 1 
+                    Username, cShawRegion, ServicingStatus, CreditAppType, ssn, *
+                FROM 
+                    Servicing_Testing.[MyAccount].[TestAccounts] ST
+                JOIN 
+                    communicationpreferences cp ON cp.contactid = st.contactid
+                JOIN 
+                    Account a ON a.AccountID = st.AccountId
+                JOIN 
+                    AccountDaily AD ON ad.AccountID = a.AccountID
+                WHERE 
+                    Brand = '{brandCondition}'
+                    AND LoanDisabled = '' 
+                    AND UserName IS NOT NULL 
+                    AND ServicingStatus = 'open Active'
+                    AND a.AccountStatusID = 0 -- 0 means Not Purged
+                    AND ad.cstatus = '0' -- 0 is Open Active
+                    AND FinanceType = '{financeType}'
+                ORDER BY 
+                    NEWID()";
+                */
+
+                squery = ExcelHelper.ReadExcelData();
+
+                Dictionary<string, object> objResults = new Dictionary<string, object>();
+                objResults = dbHelper.fetchValuesFromDB(squery);
+                if (objResults.Count > 0)
+                {
+                    
+                    
+                    if (objResults.ContainsKey("Username"))
+                    {
+                       Variables.username = objResults["Username"].ToString();
+                    }
+                    else
+                    {
+                        Variables.username = objResults["UserName"].ToString();
+                    }
+
+                    AccountId = objResults["AccountId"].ToString();
+
+                    Console.WriteLine("Username is " + Variables.username);
+                    PerformLogin(Variables.username, "password");
+
+                    if (loginerror > 0)
+                    {
+                        //Console.WriteLine(loginerror.Text);
+                        PerformLogin(Variables.username, "Password1");
+                    }
+
+                    
+                    if (IsAccountSummaryPageDisplayed())
+                    {
+                        break;
+                    }
+                    
+                    
+                }
+
+                
+                
+                bool IsAccountSummaryPageDisplayed()
+                {
+                    return (driver.FindElements(By.XPath("//span[contains(text(),'Account Summary')]")).Count > 0 ||
+                          driver.FindElements(By.XPath("//span[contains(text(),'Accounts')]")).Count > 0 ||
+                          accountSummaryPage.pastduepopupCount > 0 ||
+                          accountSummaryPage.AcknowledgePopupCount > 0 );
+                }
+                
+
+                i++;
+            } while (i <= 5);
+
+
+            void PerformLogin(string username, string password)
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+                UserName.Clear();
+                UserName.SendKeys(username);
+                Password.Clear();
+                Password.SendKeys(password);
+                genHelper.clickOn(SignInButton, "SignIn Button");
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+            }
+
+            string[] brands = { "MMNARetail", "MMNALease", "MMNACommRetail", "MMNACommLease" };
+
+            //foreach (string brand in brands)
+            //{
+            //    if (TestContext.Parameters.Get("Brand")!= null)
+            //    {
+            //        GlobalVariables.Username = "";
+            //        Console.WriteLine("Username is " + GlobalVariables.Username);
+            //        UserName.Clear();
+            //        UserName.SendKeys(GlobalVariables.Username);
+            //        Password.Clear();
+            //        Password.SendKeys("password");
+            //        ClickSignIn();
+            //        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            //        break;
+            //    }
+            //}
+
+            //Console.WriteLine("User details are entered");
+        }
+
+
+        public string GetLendingClubBannerText()
+        {
+            genericHelper.waitForElement(LendingClubBanner);
+            return LendingClubBanner.Text;
+        }
+    }
+}
+
+                                E) page_file: {'MyAccountAdminPage.cs': b'using log4net;\r\nusing MyAccount.Utils;\r\nusing OpenQA.Selenium;\r\nusing System;\r\n\r\nnamespace MyAccount.PageObjects\r\n{\r\n    public class MyAccountAdminPage\r\n    {\r\n        private IWebDriver driver;\r\n        private GenericHelper genericHelper;\r\n\r\n        public MyAccountAdminPage(IWebDriver driver)\r\n        {\r\n            this.driver = driver;\r\n            this.genericHelper = new GenericHelper(driver);\r\n        }\r\n\r\n        public IWebElement UsernameInput => driver.FindElement(By.XPath("//input[@data-bind=\'value: searchCriteria\']"));\r\n        public IWebElement SearchByDropdown => driver.FindElement(By.XPath("//select[@id=\'type\']"));\r\n        public IWebElement SearchButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-success\' and contains(text(),\'Search\')]"));\r\n        public IWebElement DisableAccountButton => driver.FindElement(By.XPath("//button[@href=\'#disableModal\']"));\r\n        public IWebElement DisableAccountText => driver.FindElement(By.Id("disableModalLabel"));\r\n        public IWebElement DisableAccountPopupButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-primary\']"));\r\n        public IWebElement EnableAccountButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-primary btn-block\']"));\r\n        public IWebElement EnableAccountText => driver.FindElement(By.Id("disableModalLabel"));\r\n        public IWebElement EnableAccountPopupButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-primary\']"));\r\n        public IWebElement ImpersonateButton => driver.FindElement(By.Id("btnImmpersonate"));\r\n        public IWebElement TokenValidationText => driver.FindElement(By.XPath("//span[@class=\'subtitle\']"));\r\n        public IWebElement SecondFactorTokenField => driver.FindElement(By.XPath("//div[@id=\'AdminLogin\']//input[2]"));\r\n        public IWebElement AuthenticateButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-success\']"));\r\n        public IWebElement LoginButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-success-icon btn-login\']"));\r\n        public IWebElement PleaseEnterTokenText => driver.FindElement(By.XPath("//span[@class=\'subtitle\']"));\r\n        public IWebElement SecondFactorTokenValue => driver.FindElement(By.Id("SecondToken"));\r\n        public IWebElement ImpersonateErrorText => driver.FindElement(By.XPath("//*[contains(text(),\'action is not allowed while impersonating\')]"));\r\n        public IWebElement EmailEditButton => driver.FindElement(By.ClassName("btn-info"));\r\n        public IWebElement EmailAddressInput => driver.FindElement(By.CssSelector("[data-bind=\'value: newEmail\']"));\r\n        public IWebElement SaveButton => driver.FindElement(By.CssSelector("[data-bind=\'click: updateEmail\']"));\r\n        public IWebElement UnlockAccountButton => driver.FindElement(By.Id("btnUnlock"));\r\n        public IWebElement EnablePopupButton => driver.FindElement(By.XPath("//button[@class=\'btn btn-primary\']"));\r\n        public IWebElement ResetPasswordButton => driver.FindElement(By.XPath("//button[contains(text(),\'Reset Password\')]"));\r\n        public IWebElement ResetPasswordPopupButton => driver.FindElement(By.XPath("//button[contains(text(),\'Reset Password\')]"));\r\n        public IWebElement TokenKeyInput => driver.FindElement(By.XPath("//*[@id=\'AdminLogin\']/input[2]"));\r\n\r\n        public void EnterUsername(string username)\r\n        {\r\n            UsernameInput.Clear();\r\n            genericHelper.sendKeys(UsernameInput, username, "Username Input");\r\n        }\r\n\r\n        public void SelectSearchByDropdown(int index)\r\n        {\r\n            genericHelper.selectValueFromDropdown(SearchByDropdown, index);\r\n        }\r\n\r\n        public void ClickSearchButton()\r\n        {\r\n            genericHelper.clickOn(SearchButton, "Search Button");\r\n        }\r\n\r\n        public void ClickDisableAccountButton()\r\n        {\r\n            genericHelper.waitForElement(DisableAccountButton);\r\n            genericHelper.clickOn(DisableAccountButton, "Disable Account Button");\r\n        }\r\n\r\n        public string GetDisableAccountText()\r\n        {\r\n            genericHelper.waitForElement(DisableAccountText);\r\n            return DisableAccountText.Text;\r\n        }\r\n\r\n        public void ClickDisableAccountPopupButton()\r\n        {\r\n            genericHelper.clickOn(DisableAccountPopupButton, "Disable Account Popup Button");\r\n        }\r\n\r\n        public void ClickEnableAccountButton()\r\n        {\r\n            genericHelper.waitForElement(EnableAccountButton);\r\n            genericHelper.clickOn(EnableAccountButton, "Enable Account Button");\r\n        }\r\n\r\n        public string GetEnableAccountText()\r\n        {\r\n            genericHelper.waitForElement(EnableAccountText);\r\n            return EnableAccountText.Text;\r\n        }\r\n\r\n        public void ClickEnableAccountPopupButton()\r\n        {\r\n            genericHelper.clickOn(EnableAccountPopupButton, "Enable Account Popup Button");\r\n        }\r\n\r\n        public void ClickImpersonateButton()\r\n        {\r\n            genericHelper.waitForElement(ImpersonateButton);\r\n            genericHelper.clickOn(ImpersonateButton, "Impersonate Button");\r\n        }\r\n\r\n        public string GetTokenValidationText()\r\n        {\r\n            genericHelper.waitForElement(TokenValidationText);\r\n            return TokenValidationText.Text;\r\n        }\r\n\r\n        public string CopySecondFactorToken()\r\n        {\r\n            genericHelper.waitForElement(SecondFactorTokenField);\r\n            return SecondFactorTokenField.GetAttribute("value");\r\n        }\r\n\r\n        public void EnterSecondFactorToken(string token)\r\n        {\r\n            SecondFactorTokenValue.Clear();\r\n            genericHelper.sendKeys(SecondFactorTokenValue, token, "Second Factor Token Field");\r\n        }\r\n\r\n        public void ClickAuthenticateButton()\r\n        {\r\n            genericHelper.clickOn(AuthenticateButton, "Authenticate Button");\r\n        }\r\n\r\n        public void ClickLoginButton()\r\n        {\r\n            genericHelper.clickOn(LoginButton, "Login Button");\r\n            Thread.Sleep(2000);\r\n        }\r\n\r\n        public void SelectSearchByDropdownValue(int value)\r\n        {\r\n            genericHelper.selectValueFromDropdown(SearchByDropdown, value);\r\n        }\r\n\r\n        public void ClickEmailEditButton()\r\n        {\r\n            genericHelper.clickOn(EmailEditButton, "Email Edit Button");\r\n        }\r\n\r\n        public void EnterEmailAddress(string email)\r\n        {\r\n            EmailAddressInput.Clear();\r\n            genericHelper.sendKeys(EmailAddressInput, email, "Email Address Input");\r\n        }\r\n\r\n        public void ClickSaveButton()\r\n        {\r\n            genericHelper.clickOn(SaveButton, "Save Button");\r\n        }\r\n\r\n        public void ClickUnlockAccountButton()\r\n        {\r\n            genericHelper.clickOn(UnlockAccountButton, "Unlock Account Button");\r\n        }\r\n\r\n        public void ClickEnablePopupButton()\r\n        {\r\n            genericHelper.clickOn(EnablePopupButton, "Enable Popup Button");\r\n        }\r\n\r\n        public void ClickResetPasswordButton()\r\n        {\r\n            genericHelper.clickOn(ResetPasswordButton, "Reset Password Button");\r\n        }\r\n\r\n        public void ClickResetPasswordPopupButton()\r\n        {\r\n            genericHelper.clickOn(ResetPasswordPopupButton, "Reset Password Popup Button");\r\n        }\r\n\r\n        public string CopyTokenKey()\r\n        {\r\n            return TokenKeyInput.GetAttribute("value");\r\n        }\r\n\r\n        public void EnterSecondToken(string token)\r\n        {\r\n            SecondFactorTokenValue.Clear();\r\n            genericHelper.sendKeys(SecondFactorTokenValue, token, "Second Token Input");\r\n        }\r\n\r\n        public string GetPleaseEnterTokenText()\r\n        {\r\n            genericHelper.waitForElement(PleaseEnterTokenText);\r\n            return PleaseEnterTokenText.Text;\r\n        }\r\n\r\n        public string GetImpersonateErrorText()\r\n        {\r\n            genericHelper.waitForElement(ImpersonateErrorText);\r\n            return ImpersonateErrorText.Text;\r\n        }\r\n\r\n        public string GetUsernameText()\r\n        {\r\n            genericHelper.waitForElement(UsernameInput);\r\n            return UsernameInput.GetAttribute("value");\r\n        }\r\n    }\r\n}', 'MyAccountVehiclePolicyPage.cs': b'using log4net;\r\nusing MyAccount.Utils;\r\nusing OpenQA.Selenium;\r\nusing System;\r\n\r\nnamespace MyAccount.PageObjects\r\n{\r\n    public class MyAccountVehiclePolicyPage\r\n    {\r\n        private IWebDriver driver;\r\n        private GenericHelper genericHelper;\r\n\r\n        public MyAccountVehiclePolicyPage(IWebDriver driver)\r\n        {\r\n            this.driver = driver;\r\n            this.genericHelper = new GenericHelper(driver);\r\n        }\r\n\r\n        public IWebElement VehicleAndInsuranceLink => driver.FindElement(By.XPath("//a[@data-navto=\'/Account/vehicle\']"));\r\n        public IWebElement VehicleInfoText => driver.FindElement(By.XPath("/html/body/div[2]/section/div/div/div/h1"));\r\n        public IWebElement PolicyTab => driver.FindElement(By.XPath("//*[@id=\'vehicleTabs\']/li[2]/a"));\r\n        public IWebElement PolicyCard => driver.FindElement(By.XPath("//*[@id=\'policy\']/div[2]/div[2]/a/div"));\r\n        public IWebElement AutoInsuranceText => driver.FindElement(By.XPath("//*[@id=\'policy-edit\']/div[1]/h2[1]"));\r\n        public IWebElement InsuranceProviderField => driver.FindElement(By.XPath("//*[@id=\'insurance-provider\']"));\r\n        public IWebElement PolicyNumberField => driver.FindElement(By.XPath("//*[@id=\'insurance-policynumber\']"));\r\n        public IWebElement EffectiveDateField => driver.FindElement(By.XPath("//*[@id=\'insurance-effective\']"));\r\n        public IWebElement ExpirationDateField => driver.FindElement(By.XPath("//*[@id=\'insurance-expiration\']"));\r\n        public IWebElement AgentNameField => driver.FindElement(By.XPath("//*[@id=\'insurance-agent\']"));\r\n        public IWebElement AgentPhoneField => driver.FindElement(By.XPath("//*[@id=\'insurance-phone\']"));\r\n        public IWebElement SaveButton => driver.FindElement(By.XPath("//*[@id=\'policy-edit\']/div[5]/div[1]/a"));\r\n        public IWebElement UpdatedMessageText => driver.FindElement(By.XPath("//span[contains(text(),\'Updated\')]"));\r\n        public IWebElement ClaimsTab => driver.FindElement(By.XPath("//*[@id=\'vehicleTabs\']/li[3]/a"));\r\n        public IWebElement NewClaimLink => driver.FindElement(By.XPath("//*[@id=\'claims\']/div[1]/p[2]/a"));\r\n        public IWebElement NewClaimHeaderText => driver.FindElement(By.XPath("//*[@id=\'claims-edit\']/div[1]/h2"));\r\n        public IWebElement TypeOfClaimDropdown => driver.FindElement(By.XPath("//*[@id=\'claimtype\']"));\r\n        public IWebElement LocationOfVehicleDropdown => driver.FindElement(By.Id("placetype"));\r\n        public IWebElement PolicyHolderField => driver.FindElement(By.Id("PolicyHolder"));\r\n        public IWebElement PolicyNumber2Field => driver.FindElement(By.Id("PolicyNumber"));\r\n        public IWebElement ClaimNumberField => driver.FindElement(By.XPath("//*[@id=\'ClaimNumber\']"));\r\n        public IWebElement AccidentDateField => driver.FindElement(By.XPath("//*[@id=\'LossDate\']"));\r\n        public IWebElement ClaimAcceptedDropdown => driver.FindElement(By.XPath("//*[@id=\'ClaimAccepted\']"));\r\n        public IWebElement ClaimAmountField => driver.FindElement(By.XPath("//*[@id=\'ClaimAmount\']"));\r\n        public IWebElement ClaimDeductibleField => driver.FindElement(By.XPath("//*[@id=\'ClaimDeductible\']"));\r\n        public IWebElement MileageField => driver.FindElement(By.Id("Mileage"));\r\n        public IWebElement VINField => driver.FindElement(By.XPath("//*[@id=\'VIN\']"));\r\n        public IWebElement MakeField => driver.FindElement(By.Id("Make"));\r\n        public IWebElement ModelField => driver.FindElement(By.Id("Model"));\r\n        public IWebElement YearField => driver.FindElement(By.Id("Year"));\r\n        public IWebElement InsuranceProvider2Field => driver.FindElement(By.XPath("//*[@id=\'InsuranceCompanyName\']"));\r\n        public IWebElement InsurancePhoneField => driver.FindElement(By.XPath("//*[@id=\'InsuranceCompanyPhone\']"));\r\n        public IWebElement AdjusterNameField => driver.FindElement(By.XPath("//*[@id=\'AdjusterName\']"));\r\n        public IWebElement AgentPhone2Field => driver.FindElement(By.XPath("//*[@id=\'AgentPhone\']"));\r\n        public IWebElement AdjusterPhoneField => driver.FindElement(By.XPath("//*[@id=\'AdjusterPhone\']"));\r\n        public IWebElement CollateralLocationField => driver.FindElement(By.XPath("//*[@id=\'UnitLocationName\']"));\r\n        public IWebElement CollateralCityField => driver.FindElement(By.XPath("//*[@id=\'CollateralCity\']"));\r\n        public IWebElement CollateralStateField => driver.FindElement(By.XPath("//*[@id=\'CollateralState\']"));\r\n        public IWebElement CollateralPhoneField => driver.FindElement(By.XPath("//*[@id=\'CollateralPhone\']"));\r\n        public IWebElement CollateralZipField => driver.FindElement(By.XPath("//*[@id=\'CollateralZip\']"));\r\n        public IWebElement Save2Button => driver.FindElement(By.XPath("//*[@id=\'claims-edit\']/div[6]/div[1]/a"));\r\n        public IWebElement ClaimAddedMessageText1 => driver.FindElement(By.XPath("(//span[contains(text(),\'Added\')])[1]"));\r\n        public IWebElement ClaimAddedMessageText2 => driver.FindElement(By.XPath("(//span[contains(text(),\'Added\')])[2]"));\r\n        public IWebElement GarageAddressLink => driver.FindElement(By.XPath("//div[@class=\'vcard\']//div[@class=\'fn\']"));\r\n        public IWebElement GarageAddressText => driver.FindElement(By.XPath("//h2[contains(text(),\'Garage Address\')]"));\r\n        public IWebElement AddressInputText => driver.FindElement(By.Id("garage-street1"));\r\n        public IWebElement CityInputText => driver.FindElement(By.Id("garage-city"));\r\n        public IWebElement StateDropdown => driver.FindElement(By.Id("garage-state"));\r\n        public IWebElement ZipCodeInputText => driver.FindElement(By.Id("garage-zipcode"));\r\n        public IWebElement NicknameForYourVehicle => driver.FindElement(By.XPath("//*[@id=\'input-nickname\']"));\r\n        public IWebElement VehicleInfo => driver.FindElement(By.XPath("//span[@data-bind=\'text: vehicleYearMakeModel"));\r\n        public IWebElement VehicleName => driver.FindElement(By.XPath("//*[@id=\'garage-address\']/div/div[2]/a/div/div[1]/div[1]/h2"));\r\n\r\n        public void EnterNicknameForVehicle(string nickname)\r\n        {\r\n            NicknameForYourVehicle.Clear();\r\n            genericHelper.sendKeys(NicknameForYourVehicle, nickname, "Nickname for Vehicle");\r\n        }\r\n\r\n        public string GetVehicleInfoText()\r\n        {\r\n\r\n            genericHelper.waitForElement(VehicleInfo);\r\n            return VehicleInfo.Text;\r\n\r\n        }\r\n        public void ClickVehicleInfo()\r\n        {\r\n            genericHelper.clickOn(VehicleName, "Vehicle Name Button");\r\n        }\r\n\r\n        public void ClickVehicleAndInsuranceLink()\r\n        {\r\n            genericHelper.waitForElement(VehicleAndInsuranceLink);\r\n            genericHelper.clickOn(VehicleAndInsuranceLink, "Vehicle and Insurance Link");\r\n        }\r\n\r\n    /*    public string GetVehicleInfoText()\r\n        {\r\n            genericHelper.waitForElement(VehicleInfoText);\r\n            return VehicleInfoText.Text;\r\n        }\r\n    */\r\n        public void ClickPolicyTab()\r\n        {\r\n            genericHelper.clickOn(PolicyTab, "Policy Tab");\r\n        }\r\n\r\n        public void ClickPolicyCard()\r\n        {\r\n            genericHelper.clickOn(PolicyCard, "Policy Card");\r\n        }\r\n\r\n        public string GetAutoInsuranceText()\r\n        {\r\n            genericHelper.waitForElement(AutoInsuranceText);\r\n            return AutoInsuranceText.Text;\r\n        }\r\n\r\n        public void EnterInsuranceProvider(string value)\r\n        {\r\n            InsuranceProviderField.Clear();\r\n            genericHelper.sendKeys(InsuranceProviderField, value, "Insurance Provider Field");\r\n        }\r\n\r\n        public void EnterPolicyNumber(string value)\r\n        {\r\n            PolicyNumberField.Clear();\r\n            genericHelper.sendKeys(PolicyNumberField, value, "Policy Number Field");\r\n        }\r\n\r\n        public void EnterEffectiveDate(string value)\r\n        {\r\n            EffectiveDateField.Clear();\r\n            genericHelper.sendKeys(EffectiveDateField, value, "Effective Date Field");\r\n        }\r\n\r\n        public void EnterExpirationDate(string value)\r\n        {\r\n            ExpirationDateField.Clear();\r\n            genericHelper.sendKeys(ExpirationDateField, value, "Expiration Date Field");\r\n        }\r\n\r\n        public void EnterAgentName(string value)\r\n        {\r\n            AgentNameField.Clear();\r\n            genericHelper.sendKeys(AgentNameField, value, "Agent Name Field");\r\n        }\r\n\r\n        public void EnterAgentPhone(string value)\r\n        {\r\n            AgentPhoneField.Clear();\r\n            genericHelper.sendKeys(AgentPhoneField, value, "Agent Phone Field");\r\n        }\r\n\r\n        public void ClickSaveButton()\r\n        {\r\n            genericHelper.waitForElement(SaveButton);\r\n            genericHelper.clickOn(SaveButton, "Save Button");\r\n        }\r\n\r\n        public string GetUpdatedMessageText()\r\n        {\r\n            Thread.Sleep(2000);\r\n            genericHelper.waitForElement(UpdatedMessageText);\r\n            return UpdatedMessageText.Text;\r\n        }\r\n\r\n        public void ClickClaimsTab()\r\n        {\r\n            genericHelper.waitForElement(ClaimsTab);\r\n            genericHelper.clickOn(ClaimsTab, "Claims Tab");\r\n            genericHelper.clickOn(ClaimsTab, "Claims Tab");\r\n        }\r\n\r\n        public void ClickNewClaimLink()\r\n        {\r\n            genericHelper.waitForElement(NewClaimLink);\r\n            genericHelper.clickOn(NewClaimLink, "New Claim Link");\r\n        }\r\n\r\n        public string GetNewClaimHeaderText()\r\n        {\r\n            genericHelper.waitForElement(NewClaimHeaderText);\r\n            return NewClaimHeaderText.Text;\r\n        }\r\n\r\n        public void SelectTypeOfClaimDropdown(int index)\r\n        {\r\n            genericHelper.selectValueFromDropdown(TypeOfClaimDropdown, index);\r\n        }\r\n\r\n        public void SelectLocationOfVehicleDropdown(int index)\r\n        {\r\n            genericHelper.selectValueFromDropdown(LocationOfVehicleDropdown, index);\r\n        }\r\n\r\n        public void EnterPolicyHolder(string value)\r\n        {\r\n            PolicyHolderField.Clear();\r\n            genericHelper.sendKeys(PolicyHolderField, value, "Policy Holder Field");\r\n        }\r\n\r\n        public void EnterPolicyNumber2(string value)\r\n        {\r\n            PolicyNumber2Field.Clear();\r\n            genericHelper.sendKeys(PolicyNumber2Field, value, "Policy Number 2 Field");\r\n        }\r\n\r\n        public void EnterClaimNumber(string value)\r\n        {\r\n            ClaimNumberField.Clear();\r\n            genericHelper.sendKeys(ClaimNumberField, value, "Claim Number Field");\r\n        }\r\n\r\n        public void EnterAccidentDate(string value)\r\n        {\r\n            AccidentDateField.Clear();\r\n            genericHelper.sendKeys(AccidentDateField, value, "Accident Date Field");\r\n        }\r\n\r\n        public void SelectClaimAcceptedDropdown(int index)\r\n        {\r\n            genericHelper.selectValueFromDropdown(ClaimAcceptedDropdown, index);\r\n        }\r\n\r\n        public void EnterClaimAmount(string value)\r\n        {\r\n            ClaimAmountField.Clear();\r\n            genericHelper.sendKeys(ClaimAmountField, value, "Claim Amount Field");\r\n        }\r\n\r\n        public void EnterClaimDeductible(string value)\r\n        {\r\n            ClaimDeductibleField.Clear();\r\n            genericHelper.sendKeys(ClaimDeductibleField, value, "Claim Deductible Field");\r\n        }\r\n\r\n        public void EnterMileage(string value)\r\n        {\r\n            MileageField.Clear();\r\n            genericHelper.sendKeys(MileageField, value, "Mileage Field");\r\n        }\r\n\r\n        public void EnterVIN(string value)\r\n        {\r\n            VINField.Clear();\r\n            genericHelper.sendKeys(VINField, value, "VIN Field");\r\n        }\r\n\r\n        public void EnterMake(string value)\r\n        {\r\n            MakeField.Clear();\r\n            genericHelper.sendKeys(MakeField, value, "Make Field");\r\n        }\r\n\r\n        public void EnterModel(string value)\r\n        {\r\n            ModelField.Clear();\r\n            genericHelper.sendKeys(ModelField, value, "Model Field");\r\n        }\r\n\r\n        public void EnterYear(string value)\r\n        {\r\n            YearField.Clear();\r\n            genericHelper.sendKeys(YearField, value, "Year Field");\r\n        }\r\n\r\n        public void EnterInsuranceProvider2(string value)\r\n        {\r\n            InsuranceProvider2Field.Clear();\r\n            genericHelper.sendKeys(InsuranceProvider2Field, value, "Insurance Provider 2 Field");\r\n        }\r\n\r\n        public void EnterInsurancePhone(string value)\r\n        {\r\n            InsurancePhoneField.Clear();\r\n            genericHelper.sendKeys(InsurancePhoneField, value, "Insurance Phone Field");\r\n        }\r\n\r\n        public void EnterAdjusterName(string value)\r\n        {\r\n            AdjusterNameField.Clear();\r\n            genericHelper.sendKeys(AdjusterNameField, value, "Adjuster Name Field");\r\n        }\r\n\r\n        public void EnterAgentPhone2(string value)\r\n        {\r\n            AgentPhone2Field.Clear();\r\n            genericHelper.sendKeys(AgentPhone2Field, value, "Agent Phone 2 Field");\r\n        }\r\n\r\n        public void EnterAdjusterPhone(string value)\r\n        {\r\n            AdjusterPhoneField.Clear();\r\n            genericHelper.sendKeys(AdjusterPhoneField, value, "Adjuster Phone Field");\r\n        }\r\n\r\n        public void EnterCollateralLocation(string value)\r\n        {\r\n            CollateralLocationField.Clear();\r\n            genericHelper.sendKeys(CollateralLocationField, value, "Collateral Location Field");\r\n        }\r\n\r\n        public void EnterCollateralCity(string value)\r\n        {\r\n            CollateralCityField.Clear();\r\n            genericHelper.sendKeys(CollateralCityField, value, "Collateral City Field");\r\n        }\r\n\r\n        public void SelectState(int index)\r\n        {\r\n            genericHelper.selectValueFromDropdown(CollateralStateField, index);\r\n        }\r\n\r\n        public void EnterCollateralPhone(string value)\r\n        {\r\n            CollateralPhoneField.Clear();\r\n            genericHelper.sendKeys(CollateralPhoneField, value, "Collateral Phone Field");\r\n        }\r\n\r\n        public void EnterCollateralZip(string value)\r\n        {\r\n            CollateralZipField.Clear();\r\n            genericHelper.sendKeys(CollateralZipField, value, "Collateral Zip Field");\r\n        }\r\n\r\n        public void ClickSave2Button()\r\n        {\r\n            genericHelper.waitForElement(Save2Button);\r\n            genericHelper.clickOn(Save2Button, "Save 2 Button");\r\n        }\r\n\r\n        public string GetClaimAddedMessageText()\r\n        {\r\n            Thread.Sleep(5000);\r\n            if (ClaimAddedMessageText1.Displayed)\r\n            {\r\n                return ClaimAddedMessageText1.Text;\r\n            }\r\n            else\r\n            {\r\n                return ClaimAddedMessageText2.Text;\r\n            }\r\n        }\r\n\r\n        public void ClickGarageAddressLink()\r\n        {\r\n            genericHelper.clickOn(GarageAddressLink, "Garage Address Link");\r\n        }\r\n\r\n        public string GetGarageAddressText()\r\n        {\r\n            genericHelper.waitForElement(GarageAddressText);\r\n            return GarageAddressText.Text;\r\n        }\r\n\r\n        public void EnterGarageAddressDetails(string address, string city, string state, string zipCode)\r\n        {\r\n            AddressInputText.Clear();\r\n            genericHelper.sendKeys(AddressInputText, address, "Address Input Text");\r\n            CityInputText.Clear();\r\n            genericHelper.sendKeys(CityInputText, city, "City Input Text");\r\n            genericHelper.selectValueFromDropdown(StateDropdown, int.Parse(state));\r\n            ZipCodeInputText.Clear();\r\n            genericHelper.sendKeys(ZipCodeInputText, zipCode, "Zip Code Input Text");\r\n        }\r\n    }\r\n}', 'MyAccountProfilePage.cs': b'using log4net;\r\nusing MyAccount.Utils;\r\nusing OpenQA.Selenium;\r\nusing System;\r\nusing System.Net.Mail;\r\n\r\nnamespace MyAccount.PageObjects\r\n{\r\n    public class MyAccountProfilePage\r\n    {\r\n        private IWebDriver driver;\r\n        private GenericHelper genericHelper;\r\n\r\n        public MyAccountProfilePage(IWebDriver driver)\r\n        {\r\n            this.driver = driver;\r\n            this.genericHelper = new GenericHelper(driver);\r\n        }\r\n\r\n        public IWebElement AccountProfileLink => driver.FindElement(By.XPath("//li[@class=\'menu-item account-profile\']"));\r\n        public IWebElement PrimaryAddressText => driver.FindElement(By.XPath("//h3[contains(text(),\'Primary Address\')]"));\r\n        public IWebElement MailingAddress => driver.FindElement(By.Id("m-address"));\r\n        public IWebElement City => driver.FindElement(By.Id("m-city"));\r\n        public IWebElement State => driver.FindElement(By.Id("m-state"));\r\n        public IWebElement ZipCode => driver.FindElement(By.Id("m-zip-code"));\r\n        public IWebElement ExistingCellPhone => driver.FindElement(By.XPath("//*[@data-bind=\'phoneText: Number\']"));\r\n        public IWebElement CellPhone => driver.FindElement(By.Id("profile-phone"));\r\n        public IWebElement EditCellPhone => driver.FindElement(By.XPath("//a[@data-bind=\'click: $parent.phoneEditor.editPhone\']"));\r\n        public IWebElement IsThisMobileDeviceYesRadioButton => driver.FindElement(By.XPath("//*[@for=\'mobile-device-radio-yes\']"));\r\n        public IWebElement AuthorizePhoneYesRadioButton => driver.FindElement(By.XPath("//*[@for=\'authorize-device-radio-yes\']"));\r\n        public IWebElement UpdateButton => driver.FindElement(By.XPath("//a[@class=\'small button\' and contains(text(),\'Update\')]"));\r\n        public IWebElement EmailAddress => driver.FindElement(By.Id("email-address"));\r\n        public IWebElement StatementPreferenceElectronic => driver.FindElement(By.XPath("//label[@for=\'statement-electronic\']"));\r\n        public IWebElement EmailPreference => driver.FindElement(By.XPath("(//span[@class=\'fa fa-chevron-right fa-2x\'])[1]"));\r\n        public IWebElement AccountRelatedEmail => driver.FindElement(By.XPath("//*[@data-bind=\'toggleButton: CommunicationPreferences.EmailAccountNotifications\']"));\r\n        public IWebElement SmsPreference => driver.FindElement(By.XPath("(//span[@class=\'fa fa-chevron-right fa-2x\'])[2]"));\r\n        public IWebElement PromotionSpecialOffer => driver.FindElement(By.XPath("(//span[@class=\'fa fa-square fa-2x inactive\'])[4]"));\r\n        public IWebElement SaveButton => driver.FindElement(By.Id("profile-save-btn"));\r\n        public IWebElement SavedMessage => driver.FindElement(By.XPath("//span[contains(text(),\'updates to your demographic information have been saved\')]"));\r\n        public IWebElement BackToAccountSummary => driver.FindElement(By.XPath("//p[@class=\'legal-text\']"));\r\n\r\n        public void ClickAccountProfileLink()\r\n        {\r\n            genericHelper.clickOn(AccountProfileLink, "Account Profile Link");\r\n        }\r\n\r\n        public string GetPrimaryAddressText()\r\n        {\r\n            genericHelper.waitForElement(PrimaryAddressText);\r\n            return PrimaryAddressText.Text;\r\n        }\r\n\r\n        public void EnterMailingAddress(string address, string city, string state, string zipCode)\r\n        {\r\n            MailingAddress.Clear();\r\n            genericHelper.sendKeys(MailingAddress, address, "Mailing Address");\r\n            City.Clear();\r\n            genericHelper.sendKeys(City, city, "City");\r\n            genericHelper.sendKeys(State, state, "State");\r\n            ZipCode.Clear();\r\n            genericHelper.sendKeys(ZipCode, zipCode, "Zip Code");\r\n        }\r\n\r\n        public void EnterCellPhone(string phoneNumber)\r\n        {\r\n            genericHelper.sendKeys(CellPhone, phoneNumber, "Cell Phone");\r\n        }\r\n\r\n        public void UpdateCellPhone(string newPhoneNumber)\r\n        {\r\n            genericHelper.waitForElement(EditCellPhone);\r\n            genericHelper.clickOn(EditCellPhone, "Edit Cell Phone");\r\n            if (EditCellPhone.Displayed)\r\n            {\r\n                genericHelper.clickOn(EditCellPhone, "Edit Cell Phone");\r\n            }\r\n            genericHelper.waitForElement(CellPhone);\r\n            CellPhone.Clear();\r\n            genericHelper.sendKeys(CellPhone, newPhoneNumber, "New Cell Phone");\r\n            genericHelper.waitForElement(IsThisMobileDeviceYesRadioButton);\r\n            if (IsThisMobileDeviceYesRadioButton.Displayed)\r\n            {\r\n                genericHelper.GetWebdriverWait(TimeSpan.FromSeconds(5));\r\n                genericHelper.clickOn(IsThisMobileDeviceYesRadioButton, "Is This Mobile Device Yes Radio Button");\r\n                genericHelper.clickOn(IsThisMobileDeviceYesRadioButton, "Is This Mobile Device Yes Radio Button");\r\n                genericHelper.clickOn(AuthorizePhoneYesRadioButton, "Authorize Phone Yes Radio Button");\r\n            }\r\n\r\n            genericHelper.clickOn(UpdateButton, "Update Button");\r\n        }\r\n\r\n        public void EnterEmailAddress()\r\n        {\r\n            Random rnd = new Random();\r\n            string email = "MyAccountTest" + rnd.Next(10000, 100000) + "@gmail.com";\r\n            genericHelper.waitForElement(EmailAddress);\r\n            EmailAddress.Clear();\r\n            genericHelper.sendKeys(EmailAddress, email, "Email Address");\r\n        }\r\n\r\n        public void SelectStatementPreferenceElectronic()\r\n        {\r\n            genericHelper.clickOn(StatementPreferenceElectronic, "Statement Preference Electronic");\r\n        }\r\n\r\n        public void SelectEmailPreference()\r\n        {\r\n            genericHelper.clickOn(EmailPreference, "Email Preference");\r\n            genericHelper.clickOn(AccountRelatedEmail, "Account Related Email");\r\n        }\r\n\r\n        public void SelectSmsPreference()\r\n        {\r\n            genericHelper.clickOn(SmsPreference, "SMS Preference");\r\n            genericHelper.clickOn(PromotionSpecialOffer, "Promotion & Special Offer");\r\n        }\r\n\r\n        public void ClickSaveButton()\r\n        {\r\n            genericHelper.clickOn(SaveButton, "Save Button");\r\n        }\r\n\r\n        public string GetSavedMessage()\r\n        {\r\n            Thread.Sleep(3000);\r\n            genericHelper.waitForElement(SavedMessage);\r\n            return SavedMessage.Text;\r\n        }\r\n\r\n        public void ClickBackToAccountSummary()\r\n        {\r\n            genericHelper.clickOn(BackToAccountSummary, "Back to Account Summary");\r\n        }\r\n    }\r\n}'}
+                                D) **Test data or Datos Variables:**
+                                        Generate the C# class which read the json file using C# directly,
+                                        The Dataos file is a JSON file. 
+                                        use only variable names instead of variable value in the code as per the above details strictly.
+                                        Datos file: {'myaccounturl': 'https://chryslermyaccount-staging.santanderconsumerusa.com/', 'Username': 'DrtXXXXX_17888999', 'password': 'password'}E) ** Example **                
+                        
+                                        Input:
+                                        Titles: MyAccount - Statement popup for existing user who already opted for paper stmt
+                                        Steps_list: Step 1 open MyAccount on Stage
+ for Santander accounts: https://myaccount-staging.santanderconsumerusa.com/
+
+Step 2 Enter username and password from detos
+Step 3 Click on login button
+Step 4 Verify popup header as "we've switched the customer to e-statements"
+Step 5 Click on Acknowledge button
+Step 6 Verify Thank you message and close popup
+Step 7 Click on UserDropDown on the top right corner 
+Step 8 Click on Signout  
+Step 9 Repeat step2 and step3
+Step 10 Verify the verbage as " You have been enrolled in paperless statements. Please make sure your contact information is updated. To manage your preferences, click here."
+Step 11 Click on contact information link
+Step 12 Enter Email address from detos file.
+Step 13 Select statement prerence as "Electronics"
+Step 14 Click on Save button
+Step 15 Verify message after details got saved as "The updates to your demographic information have been saved."
+Step 16 Click on Back to account summary 
+Step 17 Click on click here from verbage
+Step 18 Verify popup header as "Update your statement preferences"
+Step 19 Click on use paper radio button and click submit button
+Step 20 Verify verbage from step10 should not be visible now
+Step 22 Click on UserDropDown on the top right corner 
+Step 23 Click on Signout  
+                                        Exptected_Outputs: able to open account on MyAccount
+
+Entered username and password
+Clicked on login button
+Popup header verified
+Clicked on Acknowledge button 
+
+Verified thank you message
+UserDropDown must be clicked
+Signout is clicked 
+Repeat step2 and step3
+Verified the verbage
+Clicked on contact information link
+Entered Email address from detos file.
+Statement preferance should be selected
+Clicked on save button
+Verified savedMessage
+Clicked on  back to account summary.
+Clicked on click here link
+Verified popup header
+Clicked on use paper radio button and clicked submit
+Verbage from step10 should not be visible
+UserDropDown must be clicked
+Signout is clicked 
+                                        Test_object_variables:{'login-page': {'username': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'username'}, 'password': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'password'}, 'login': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//*[@id='form-sign-in']/button/span[2]"}}, 'account-summary-page': {'popup_header': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//h5[@class='modal-title' and contains(text(),'We have switched your account to e‑statements!')]"}, 'Acknowledge': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"}, 'Thankyou': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//h5[@class='modal-title' and contains(text(),'Thank you!')]"}, 'Verbage_message': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//p[@class='alert-message' and contains(text(),'You have been enrolled in paperless statements')]"}, 'contact_information': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//p[@class='alert-message']//a[@href='/Profile/Personal?updateProfile=true']"}, 'clickherelink': {'element_type': 'link', 'by': 'xpath', 'id-obj': "//p[@class='alert-message']//a[contains(text(),'click here')]"}, 'updatePreferenceHeader': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//h5[@class='modal-title' and contains(text(),'Update your statement preferences')]"}, 'usepaperradiobutton': {'element_type': 'radioButton', 'by': 'xpath', 'id-obj': "//h5[@class='modal-title' and contains(text(),'Update your statement preferences')]"}}, 'accountProfilePage': {'EmailAddress': {'element_type': 'inputtext', 'by': 'id', 'id-obj': 'email-address'}, 'StmtPreferanceElectronic': {'element_type': 'label', 'by': 'xpath', 'id-obj': "//label[@for='statement-electronic']"}, 'EmailPrefenrance': {'element_type': 'button', 'by': 'xpath', 'id-obj': "(//span[@class='fa fa-chevron-right fa-2x'])[1]"}, 'Save': {'element_type': 'button', 'by': 'id', 'id-obj': 'profile-save-btn'}, 'SavedMessage': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//span[contains(text(),'updates to your demographic information have been saved')]"}, 'BackToAccountSummary': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//p[@class='legal-text']"}}, 'UserDropDown': {'element_type': 'dropdown', 'by': 'xpath', 'id-obj': "//*[@id='menu-secondary']/li[6]/a/span[2]"}, 'Signout': {'element_type': 'button', 'by': 'xpath', 'id-obj': "//*[@id='menu-secondary']/li[6]/ul/li[4]/a"}, 'Signout_message': {'element_type': 'text', 'by': 'xpath', 'id-obj': "//*[contains(text(),'You are now signed out')]"}}
+                                        page_file:using log4net;
+using MyAccount.Utils;
+using OpenQA.Selenium;
+using System;
+using System.Net.Mail;
+
+namespace MyAccount.PageObjects
+{
+    public class MyAccountProfilePage
+    {
+        private IWebDriver driver;
+        private GenericHelper genericHelper;
+
+        public MyAccountProfilePage(IWebDriver driver)
+        {
+            this.driver = driver;
+            this.genericHelper = new GenericHelper(driver);
+        }
+
+        public IWebElement AccountProfileLink => driver.FindElement(By.XPath("//li[@class='menu-item account-profile']"));
+        public IWebElement PrimaryAddressText => driver.FindElement(By.XPath("//h3[contains(text(),'Primary Address')]"));
+        public IWebElement MailingAddress => driver.FindElement(By.Id("m-address"));
+        public IWebElement City => driver.FindElement(By.Id("m-city"));
+        public IWebElement State => driver.FindElement(By.Id("m-state"));
+        public IWebElement ZipCode => driver.FindElement(By.Id("m-zip-code"));
+        public IWebElement ExistingCellPhone => driver.FindElement(By.XPath("//*[@data-bind='phoneText: Number']"));
+        public IWebElement CellPhone => driver.FindElement(By.Id("profile-phone"));
+        public IWebElement EditCellPhone => driver.FindElement(By.XPath("//a[@data-bind='click: $parent.phoneEditor.editPhone']"));
+        public IWebElement IsThisMobileDeviceYesRadioButton => driver.FindElement(By.XPath("//*[@for='mobile-device-radio-yes']"));
+        public IWebElement AuthorizePhoneYesRadioButton => driver.FindElement(By.XPath("//*[@for='authorize-device-radio-yes']"));
+        public IWebElement UpdateButton => driver.FindElement(By.XPath("//a[@class='small button active' and contains(text(),'Update')]"));
+        public IWebElement EmailAddress => driver.FindElement(By.Id("email-address"));
+        public IWebElement StatementPreferenceElectronic => driver.FindElement(By.XPath("//label[@for='statement-electronic']"));
+        public IWebElement EmailPreference => driver.FindElement(By.XPath("(//span[@class='fa fa-chevron-right fa-2x'])[1]"));
+        public IWebElement AccountRelatedEmail => driver.FindElement(By.XPath("//*[@data-bind='toggleButton: CommunicationPreferences.EmailAccountNotifications']"));
+        public IWebElement SmsPreference => driver.FindElement(By.XPath("(//span[@class='fa fa-chevron-right fa-2x'])[2]"));
+        public IWebElement PromotionSpecialOffer => driver.FindElement(By.XPath("(//span[@class='fa fa-square fa-2x inactive'])[4]"));
+        public IWebElement SaveButton => driver.FindElement(By.Id("profile-save-btn"));
+        public IWebElement SavedMessage => driver.FindElement(By.XPath("//span[contains(text(),'updates to your demographic information have been saved')]"));
+        public IWebElement BackToAccountSummary => driver.FindElement(By.XPath("//p[@class='legal-text']"));
+
+        public void ClickAccountProfileLink()
+        {
+            genericHelper.clickOn(AccountProfileLink, "Account Profile Link");
+        }
+
+        public string GetPrimaryAddressText()
+        {
+            genericHelper.waitForElement(PrimaryAddressText);
+            return PrimaryAddressText.Text;
+        }
+
+        public void EnterMailingAddress(string address, string city, string state, string zipCode)
+        {
+            MailingAddress.Clear();
+            genericHelper.sendKeys(MailingAddress, address, "Mailing Address");
+            City.Clear();
+            genericHelper.sendKeys(City, city, "City");
+            genericHelper.sendKeys(State, state, "State");
+            ZipCode.Clear();
+            genericHelper.sendKeys(ZipCode, zipCode, "Zip Code");
+        }
+
+        public void EnterCellPhone(string phoneNumber)
+        {
+            genericHelper.sendKeys(CellPhone, phoneNumber, "Cell Phone");
+        }
+
+        public void UpdateCellPhone(string newPhoneNumber)
+        {
+
+            genericHelper.waitForElement(EditCellPhone);
+            genericHelper.clickOn(EditCellPhone, "Edit Cell Phone");
+            if(EditCellPhone.Displayed)
+            {
+                genericHelper.clickOn(EditCellPhone, "Edit Cell Phone");
+            }
+            genericHelper.waitForElement(CellPhone);
+            CellPhone.Clear();
+            genericHelper.sendKeys(CellPhone, newPhoneNumber, "New Cell Phone");
+            genericHelper.waitForElement(IsThisMobileDeviceYesRadioButton);
+            if (IsThisMobileDeviceYesRadioButton.Displayed)
+            {
+                genericHelper.GetWebdriverWait(TimeSpan.FromSeconds(5));
+                genericHelper.clickOn(IsThisMobileDeviceYesRadioButton, "Is This Mobile Device Yes Radio Button");
+                genericHelper.clickOn(IsThisMobileDeviceYesRadioButton, "Is This Mobile Device Yes Radio Button");
+                genericHelper.clickOn(AuthorizePhoneYesRadioButton, "Authorize Phone Yes Radio Button");
+            }
+            
+            genericHelper.clickOn(UpdateButton, "Update Button");
+        }
+
+        public void EnterEmailAddress()
+        {
+            Random rnd = new Random();
+            string email = "MyAccountTest" + rnd.Next(10000, 100000) + "@gmail.com";
+            genericHelper.waitForElement(EmailAddress);
+            EmailAddress.Clear();
+            genericHelper.sendKeys(EmailAddress, email, "Email Address");
+        }
+
+        public void SelectStatementPreferenceElectronic()
+        {
+            genericHelper.clickOn(StatementPreferenceElectronic, "Statement Preference Electronic");
+        }
+
+        public void SelectEmailPreference()
+        {
+            genericHelper.clickOn(EmailPreference, "Email Preference");
+            genericHelper.clickOn(AccountRelatedEmail, "Account Related Email");
+        }
+
+        public void SelectSmsPreference()
+        {
+            genericHelper.clickOn(SmsPreference, "SMS Preference");
+            genericHelper.clickOn(PromotionSpecialOffer, "Promotion & Special Offer");
+        }
+
+        public void ClickSaveButton()
+        {
+            genericHelper.clickOn(SaveButton, "Save Button");
+        }
+
+        public string GetSavedMessage()
+        {
+            Thread.Sleep(3000);
+            genericHelper.waitForElement(SavedMessage);
+            return SavedMessage.Text;
+        }
+
+        public void ClickBackToAccountSummary()
+        {
+            genericHelper.clickOn(BackToAccountSummary, "Back to Account Summary");
+        }
+    }
+}
+                                        dataos:{'myaccounturl': 'https://myaccount-staging.santanderconsumerusa.com', 'Username': 'WhpXXXXXX_17783137', 'password ': 'password '} 
+                                        
+                                        output:
+                                        1) page : using log4net;
+using MyAccount.Utils;
+using OpenQA.Selenium;
+using System;
+
+namespace MyAccount.PageObjects
+{
+    public class MyAccountSummaryPage
+    {
+        private IWebDriver driver;
+        private GenericHelper genericHelper;
+
+        public MyAccountSummaryPage(IWebDriver driver)
+        {
+            this.driver = driver;
+            this.genericHelper = new GenericHelper(driver);
+        }
+
+        public IWebElement AccountSummaryHeader => driver.FindElement(By.XPath("//h1//span[contains(text(),'Account Summary')]"));
+        public IWebElement pastduepopup => driver.FindElement(By.XPath("//button[@data-click='closePastDueModal']//i"));
+        public IWebElement UserDropDown => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/a/span[2]"));
+        public IWebElement LogOut => driver.FindElement(By.XPath("//*[@id='menu-secondary']/li[6]/ul/li[4]/a"));
+        public IWebElement AcknowledgePopupBtn => driver.FindElement(By.XPath("//button[contains(text(),'Acknowledge')]"));
+        public IWebElement closeBtnAfterAcknowledgePopup => driver.FindElement(By.XPath("//button[@data-bind='click: closeEstatementAcknowlegeModal']"));
+        public IWebElement ViewOptionsButton => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']//div/button[contains(text(),'View Options')]"));
+        public IWebElement ViewOptionVerbiage => driver.FindElement(By.XPath("//span[@class='info-title mat-mod-text']"));
+        public IWebElement VerbageMessage => driver.FindElement(By.XPath("//p[@class='alert-message' and contains(text(),'You have been enrolled in paperless statements')]"));
+        public IWebElement ContactInformationLink => driver.FindElement(By.XPath("//p[@class='alert-message']//a[@href='/Profile/Personal?updateProfile=true']"));
+        public IWebElement ClickHereLink => driver.FindElement(By.XPath("//p[@class='alert-message']//a[contains(text(),'click here')]"));
+        public IWebElement UpdatePreferenceHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'Update your statement preferences')]"));
+        public IWebElement UsePaperRadioButton => driver.FindElement(By.XPath("//label[@for='statement-paper']"));
+        public IWebElement SubmitButton => driver.FindElement(By.XPath("//button[@type='submit']"));
+        public IWebElement PastDueAmount => driver.FindElement(By.XPath("//div[@class='col-xs-4']//span[@data-bind='currencyText: AmountDue']"));
+        public IWebElement PopupHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'We have switched your account to eâ€‘statements!')]"));
+        public int pastduepopupCount = driver.FindElements(By.XPath("//button[@data-click='closePastDueModal']//i")).Count;
+        public int AcknowledgePopupCount => driver.FindElements(By.XPath("//div[@id='estatement-acknowledge-modal' and contains(@style,'block')]//button[contains(text(),'Acknowledge')]")).Count;
+        public IWebElement AmountVerbiageQuestionMark => driver.FindElement(By.XPath("//*[@id='accountSummaryPage']/div[3]/div[1]/div/div[4]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div/span[1]/a"));
+        public IWebElement AmountVerbiage => driver.FindElement(By.XPath("//span[@class='info-title' and contains(text(),'Amount Due')]//a"));
+        public IWebElement ViewMoreOptions => driver.FindElement(By.XPath("//button[contains(text(),'View more options')]"));
+        public IWebElement AcknowledgePopupHeader => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'We have switched your account to eâ€‘statements!')]"));
+        public IWebElement AcknowledgeButton => driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-statement-round block' and text()='Acknowledge']"));
+        public IWebElement ThankYouMessage => driver.FindElement(By.XPath("//h5[@class='modal-title' and contains(text(),'Thank you!')]"));
+        public IWebElement SubmitButtonForStatementPreferance => driver.FindElement(By.XPath("//button[@data-bind='click: updateCommunicationPreferences']"));
+        public IWebElement PastDuePopupHeader => driver.FindElement(By.XPath("//h2[@class='h5' and contains(text(),'multiple accounts currently past due')]"));
+        public IWebElement VehicleDropdown => driver.FindElement(By.XPath("//div[@data-bind='visible: multipleAccounts']//div[@class='select-dropdown-heading']"));
+        public IWebElement Vehicle1 => driver.FindElement(By.XPath("(//div[@class='select-dropdown-container'])[1]"));
+        public IWebElement Vehicle2 => driver.FindElement(By.XPath("(//div[@class='select-dropdown-container'])[2]"));
+        public IWebElement VehicleAndInsurance => driver.FindElement(By.XPath("//span[contains(text(),'Vehicle and Insurance')]"));
+        public IWebElement YearMakeModel => driver.FindElement(By.XPath("//span[@data-bind='text: vehicleYearMakeModel']"));
+
+        public void ValidatePopupHeaderDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(AcknowledgePopupHeader, "Popup Header");
+        }
+
+        public string GetPopupHeaderText()
+        {
+            genericHelper.waitForElement(PopupHeader);
+            return PopupHeader.Text;
+        }
+
+        public void ClickAcknowledgeButton()
+        {
+            genericHelper.clickOn(AcknowledgeButton, "Acknowledge Button");
+        }
+
+        public void ValidateThankYouMessageDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(ThankYouMessage, "Thank You Message");
+        }
+
+        public void ValidateVerbageMessageDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(VerbageMessage, "Verbage Message");
+        }
+
+        public void ClickContactInformationLink()
+        {
+            genericHelper.clickOn(ContactInformationLink, "Contact Information Link");
+        }
+
+        public void ClickClickHereLink()
+        {
+            genericHelper.clickOn(ClickHereLink, "Click Here Link");
+        }
+
+        public void ValidateUpdatePreferenceHeaderDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(UpdatePreferenceHeader, "Update Preference Header");
+        }
+
+        public void ClickUsePaperRadioButton()
+        {
+            genericHelper.clickOn(UsePaperRadioButton, "Use Paper Radio Button");
+        }
+
+        public void ClickSubmitButton()
+        {
+            genericHelper.clickOn(SubmitButton, "Submit Button");
+        }
+
+        public bool closePastDuePopup()
+        {
+            genericHelper.waitForElement(pastduepopup);
+            if (pastduepopup.Displayed)
+            {
+                IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+                executor.ExecuteScript("arguments[0].click();", pastduepopup);
+                Console.WriteLine("Past Due Popup is visible and closed successfully");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Past Due pop up is not visible");
+                return false;
+            }
+        }
+
+        public string getAccountSummaryHeaderText()
+        {
+            genericHelper.waitForElement(AccountSummaryHeader);
+            return AccountSummaryHeader.Text;
+        }
+
+        public string GetPastDueAmountText()
+        {
+            genericHelper.waitForElement(PastDueAmount);
+            return PastDueAmount.Text;
+        }
+
+        public string GetPastDuePopupHeaderText()
+        {
+            genericHelper.waitForElement(PastDuePopupHeader);
+            return PastDuePopupHeader.Text;
+        }
+
+        public string GetAccountSummaryHeaderText()
+        {
+            genericHelper.waitForElement(AccountSummaryHeader);
+            return AccountSummaryHeader.Text;
+        }
+
+        public bool clickAcknowledgeAndClosePopup()
+        {
+            Thread.Sleep(2000);
+            genericHelper.GetWebdriverWait(TimeSpan.FromSeconds(5));
+            genericHelper.waitForElement(AcknowledgePopupBtn);
+            if (AcknowledgePopupBtn.Displayed)
+            {
+                genericHelper.clickOn(AcknowledgePopupBtn, "Acknowledge");
+                genericHelper.clickOn(closeBtnAfterAcknowledgePopup, "Close Button After Acknowledge");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Acknowledge popup is not visible");
+                return false;
+            }
+        }
+
+        public void ClickUserDropDown()
+        {
+            genericHelper.clickOn(UserDropDown, "User DropDown");
+        }
+
+        public void MouseHoverOnAmountDueQuestionMark()
+        {
+            genericHelper.waitForElement(AmountVerbiageQuestionMark);
+            genericHelper.clickOn(AmountVerbiageQuestionMark, "Amount Due Question Mark");
+        }
+
+        public string GetAmountVerbiageText()
+        {
+            genericHelper.waitForElement(AmountVerbiage);
+            genericHelper.clickOn(AmountVerbiageQuestionMark, "Amount Due Question Mark");
+            return AmountVerbiage.GetAttribute("data-original-title");
+        }
+
+        public void ClickViewOptionsButton()
+        {
+            genericHelper.clickOn(ViewOptionsButton, "View Options Button");
+        }
+
+        public void ClickViewMoreOptionsButton()
+        {
+            genericHelper.clickOn(ViewMoreOptions, "View More Options Button");
+        }
+
+        public string GetViewOptionVerbiageText()
+        {
+            genericHelper.waitForElement(ViewOptionVerbiage);
+            return ViewOptionVerbiage.Text;
+        }
+
+        public void ValidateViewOptionsButtonDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(ViewOptionsButton, "View Options Button");
+        }
+
+        public string GetUpdatePreferenceHeaderText()
+        {
+            genericHelper.waitForElement(UpdatePreferenceHeader);
+            return UpdatePreferenceHeader.Text;
+        }
+
+        public void SelectUsePaperRadioButton()
+        {
+            genericHelper.clickOn(UsePaperRadioButton, "Use Paper Radio Button");
+        }
+
+        public void ClickSubmitButtonForStatementPreferance()
+        {
+            genericHelper.clickOn(SubmitButtonForStatementPreferance, "Submit Button");
+        }
+
+        public string GetPopupHeaderAcknowledgeText()
+        {
+            genericHelper.waitForElement(AcknowledgePopupHeader);
+            return AcknowledgePopupHeader.Text;
+        }
+
+        public string GetThankYouMessageText()
+        {
+            Thread.Sleep(1000);
+            genericHelper.waitForElement(ThankYouMessage);
+            return ThankYouMessage.Text;
+        }
+
+        public void CloseThankYouPupupAfterAcknowledge()
+        {
+            genericHelper.waitForElement(closeBtnAfterAcknowledgePopup);
+            genericHelper.clickOn(closeBtnAfterAcknowledgePopup, "Close Button After Acknowledge");
+        }
+
+        public void ClickVehicleDropdown()
+        {
+            genericHelper.clickOn(VehicleDropdown, "Vehicle Dropdown");
+        }
+
+        public void ClickFirstVehicle()
+        {
+            genericHelper.clickOn(Vehicle1, "First Vehicle");
+        }
+
+        public void ClickSecondVehicle()
+        {
+            genericHelper.clickOn(Vehicle2, "Second Vehicle");
+        }
+
+        public void ClickVehicleAndInsurance()
+        {
+            genericHelper.clickOn(VehicleAndInsurance, "Vehicle and Insurance");
+        }
+
+        public string GetYearMakeModelText()
+        {
+            genericHelper.waitForElement(YearMakeModel);
+            return YearMakeModel.Text;
+        }
+
+        public void ValidateYearMakeModelDisplayed()
+        {
+            genericHelper.ValidateElementPresentOrNot(YearMakeModel, "Year Make Model");
+        }
+    }
+}
+                                        2) test : using MyAccount.PageObjects;
+using MyAccount.Utils;
+using static MyAccount.Utils.ExtendAssert;
+
+namespace MyAccount.TestCases
+{
+    public class VerifyMyAccountStatementPopup : BrowserHelper
+    {
+        LoginPage loginPage;
+        MyAccountSummaryPage accountSummaryPage;
+        MyAccountProfilePage profilePage;
+
+        [SetUp]
+        public void SetupTest()
+        {
+            loginPage = new LoginPage(driver);
+            accountSummaryPage = new MyAccountSummaryPage(driver);
+            profilePage = new MyAccountProfilePage(driver);
+        }
+
+        [Test]
+        public void ValidateMyAccountSteps()
+        {
+            driver.Navigate().GoToUrl(appUrl);
+
+            // Step 1: Open MyAccount on Stage.
+            
+            // Step 2: Enter Username and Password and click Signin.
+            //    loginPage.LoginEnterUsernameDetails();
+            loginPage.MyAccLoginInvalid();
+
+            // Step 3: Verify popup header.
+            string popupHeaderText = accountSummaryPage.GetPopupHeaderText();
+            Assertion.That(driver, popupHeaderText, Is.EqualTo("We have switched your account to e‑statements!"),
+                "Popup header text didn't match. Expected: We have switched your account to e‑statements! but Actual: " + popupHeaderText,
+                "Popup header text matched. Expected: We have switched your account to e‑statements! and Actual: " + popupHeaderText);
+
+            // Step 4: Click Acknowledge button.
+            accountSummaryPage.ClickAcknowledgeButton();
+
+            // Step 5: Verify Thank You message.
+            string thankYouMessageText = accountSummaryPage.GetThankYouMessageText();
+            Assertion.That(driver, thankYouMessageText, Is.EqualTo("Thank you!"),
+                "Thank You message text didn't match. Expected: Thank you! but Actual: " + thankYouMessageText,
+                "Thank You message text matched. Expected: Thank you! and Actual: " + thankYouMessageText);
+
+            accountSummaryPage.CloseThankYouPupupAfterAcknowledge();
+            accountSummaryPage.closePastDuePopup();
+
+            // Step 6: Click on UserDropDown and Signout.
+            loginPage.MyAccLogOut();
+
+            // Step 7: Repeat Step 2 and Step 3.
+            //           loginPage.LoginEnterUsernameDetails();
+            loginPage.MyAccLoginInvalid();
+
+            accountSummaryPage.closePastDuePopup();
+
+            // Step 8: Verify Verbage message.
+            string verbageMessageText = accountSummaryPage.VerbageMessage.Text;
+            Assertion.That(driver, verbageMessageText, Is.EqualTo("You have been enrolled in paperless statements. Please make sure your contact information is updated. To manage your preferences, click here."),
+                "Verbage message text didn't match. Expected: You have been enrolled in paperless statements. but Actual: " + verbageMessageText,
+                "Verbage message text matched. Expected: You have been enrolled in paperless statements. and Actual: " + verbageMessageText);
+
+            // Step 9: Click on Contact Information link.
+            accountSummaryPage.ClickContactInformationLink();
+
+            // Step 10: Enter Email address.
+            profilePage.EnterEmailAddress();
+
+            // Step 11: Select Statement Preference as Electronic.
+            profilePage.SelectStatementPreferenceElectronic();
+
+            // Step 12: Click Save button.
+            profilePage.ClickSaveButton();
+
+            // Step 13: Verify Saved message.
+            string savedMessageText = profilePage.GetSavedMessage();
+            Assertion.That(driver, savedMessageText, Is.EqualTo("The updates to your demographic information have been saved."),
+                "Saved message text didn't match. Expected: The updates to your demographic information have been saved. but Actual: " + savedMessageText,
+                "Saved message text matched. Expected: The updates to your demographic information have been saved. and Actual: " + savedMessageText);
+
+            // Step 14: Click Back to Account Summary.
+            profilePage.ClickBackToAccountSummary();
+
+            // Step 15: Click on Click Here link.
+            accountSummaryPage.ClickClickHereLink();
+
+            // Step 16: Verify Update Preference header.
+            string updatePreferenceHeaderText = accountSummaryPage.GetUpdatePreferenceHeaderText();
+            Assertion.That(driver, updatePreferenceHeaderText, Is.EqualTo("Update your statement preferences"),
+                "Update Preference header text didn't match. Expected: Update your statement preferences but Actual: " + updatePreferenceHeaderText,
+                "Update Preference header text matched. Expected: Update your statement preferences and Actual: " + updatePreferenceHeaderText);
+
+            // Step 17: Select Use Paper radio button and click Submit.
+            accountSummaryPage.SelectUsePaperRadioButton();
+
+            accountSummaryPage.ClickSubmitButtonForStatementPreferance();
+
+            // Step 18: Verify Verbage message is not visible.
+            Assertion.That(driver, accountSummaryPage.VerbageMessage.Displayed, Is.False,
+                "Verbage message is still visible.",
+                "Verbage message is not visible.");
+
+            // Step 19: Click on UserDropDown and Signout.
+            loginPage.MyAccLogOut();
+        }
+    }
+}
+                              

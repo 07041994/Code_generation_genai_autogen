@@ -1,0 +1,9 @@
+provider: autogen_ext.models.openai.AzureOpenAIChatCompletionClient
+config:
+  model: 'gpt-4o-2024-11-20'
+  azure_endpoint: 
+  azure_deployment:
+  api_version: "2025-01-01-preview"  #"2024-08-01-preview"
+  api_key: 
+temperature: 0
+

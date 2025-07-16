@@ -1,0 +1,93 @@
+{
+  "login-page": {
+   "username": {
+     "element_type": "inputtext",
+     "by": "id",
+     "id-obj": "username"  
+   },
+   "password": {
+     "element_type": "inputtext",
+     "by": "id",
+     "id-obj": "password"
+   },
+   "signin": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='form-sign-in']/button/span[2]"
+   },
+ "feedback": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='feedback-tab']"
+   }
+ },
+ "myaccount_feedback_page": {
+   "feedback_header": {
+     "element_type": "text",
+     "by": "xpath",
+     "id-obj": "//*[@id='fname']"  
+   },
+   "content_unsatisfied": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_66']"
+   },
+   "design_unsatisfied": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_82']"
+   },
+ "usability_neutral": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_95']"
+   },
+ "overall_neutral": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_107']"
+   },
+ 
+ "accomplish_yes": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_145']"
+   },
+ "difficulty_easy": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_150']"
+   },
+ "future_use_agree": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='tfa_138']"
+   },
+ "submit": {
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj": "//*[@id='submit_button']"
+   },
+ "feedback_message": {
+     "element_type": "text",
+     "by": "xpath",
+     "id-obj": "//*[@id='wFormThankYouPage']/div/div/p[4]/strong"
+   }
+ },
+  "UserDropDown": {
+     "element_type": "dropdown",
+     "by": "xpath",
+     "id-obj":"//*[@id='menu-secondary']/li[6]/a/span[2]"
+ },
+ "Signout": { 
+     "element_type": "button",
+     "by": "xpath",
+     "id-obj":"(//*[@id='menu-secondary']//a[text()='Sign Out'])[2]"
+   },
+ 
+ "Signout_message":{   
+     "element_type": "text",
+     "by": "xpath",
+     "id-obj":"//*[contains(text(),'You are now signed out')]"
+ }
+}

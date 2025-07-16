@@ -1,0 +1,192 @@
+{
+  "Dashboard": {
+    "captivePartnerDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "(//div[@class='rims-nav-item'])[2]/select"
+    }
+  },
+  "Incentive": {
+	  "incentive": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//label[text()='Incentives']"
+    },
+	
+	"FirstChangeSetID": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[@class='changeset-id col ng-star-inserted'])[1]"
+    },
+	"RetailAPRDelta": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "(//div[contains(text(),'Retail APR Delta')])[1]"
+    },
+	"NewRetailAPRDelta": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[contains(@class,'create-card-element round-button')])[1]"
+    },
+	"EffectiveFrom": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "(//input[contains(@name,'dp')])[1]"
+    },
+	"MinTerm": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "(//input[contains(@name,'minTerm')])[1]"
+    },
+	"MaxTerm": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "(//input[contains(@name,'maxTerm')])[1]"
+    },
+	"Tier2Delta": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier2']"
+    },
+	"Tier3Delta": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier3']"
+    },
+	"Tier4Delta": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier4']"
+    },
+	"ZeroRate1": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='zeroRateTier2Amount']"
+    },
+	"NonZeroRate1": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='nonZeroRateTier2Amount']"
+    },
+	"ZeroRate2": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='zeroRateTier3Amount']"
+    },
+	"NonZeroRate2": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='nonZeroRateTier3Amount']"
+    },
+	"ZeroRate3": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='zeroRateTier4Amount']"
+    },
+	"NonZeroRate3": {
+      "element_type": "input",
+      "by": "xpath",
+      "id-obj": "//input[@id='nonZeroRateTier4Amount']"
+    },
+	"Save": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[text()='Save'])[1]"
+    },
+	"Submit": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//button[text()='Submit'])[1]"
+    },
+	"PendingApproval": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "//label[contains(text(),'Pending Approval')]"
+    },
+	"ManagerApproved": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//label[@for='Manager-Approved'])[1]"
+    },
+	"Approve": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//div[contains(text(),'7')])[1]/following::div[1]/button[2]"
+    },
+	"ChangeSetID": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "(//div[@class='changeset-id col ng-star-inserted'])[1]"
+    },
+	"ReadyToPublish": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//label[@for='ReadyToPublish'])[1]"
+    },
+	"ViewAPRSorCreateNewOffers": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "(//div[@class='card-text text-center'])[3]"
+    },
+	"CreateViewAPRSorCreateNewOffers": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='create-card-element round-button']"
+    },
+	"Tier2": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier2']"
+    },
+	"Tier3": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier3']"
+    },
+	"Tier4": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tier4']"
+    },
+	"Tier2ZeroRate": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//td[contains(text(),'3')]"
+    },
+	"Tier3ZeroRate": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//td[contains(text(),'4')]"
+    },
+	"Tier4ZeroRate": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//td[contains(text(),'5')]"
+    }
+	
+	
+	
+	
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  }
+	
+
+  

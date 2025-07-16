@@ -1,0 +1,85 @@
+{
+  "Dashboard": {
+    "captivePartnerDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "(//div[@class='rims-nav-item'])[2]/select"
+    }
+  },
+  "Incentive": {
+	  "incentive": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//label[text()='Incentives']"
+    },
+	"createOrViewCPOVAPROffers": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='View or Create new CPOV APR Offers']"
+    },
+	"createCard": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='create-card-element round-button']"
+    },
+	"selectVehicles": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[text()='Select Vehicles']"
+    },
+	"BlankEffectiveThru": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='Effective Thru Date is required.']"
+    },
+	"PastEffectiveThruDate1": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='Effective Thru Date cannot be set before today']"
+    },
+	"PastEffectiveThruDate2": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='Effective From Date must not be after Effective Thru Date.']"
+    },
+	"NewCPOVAPROfferHeader": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='New CPOV APR Offer - Create New']"
+    },
+	"CPOVAPROfferHeader": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h1[text()='CPOV APR Offer - ChangeSet Summary']"
+    },
+	"IncentivesHeader": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h1[text()='Incentives']"
+    }
+	
+	
+	
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  }
+	
+
+  

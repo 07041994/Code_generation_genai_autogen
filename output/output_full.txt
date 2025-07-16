@@ -1,0 +1,163 @@
+### **RatesPullViewAPRSorCreateNewOffers_262142.cs **
+```csharp
+using OpenQA.Selenium;
+using Origination.Utils;
+
+namespace Originations.PageObjects
+{
+    public class RatesPullViewAPRSorCreateNewOffers_262142
+    {
+        private IWebDriver driver;
+
+        public RatesPullViewAPRSorCreateNewOffers_262142(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+
+        public IWebElement CaptivePartnerDropDown => driver.FindElement(By.XPath("(//div[@class='rims-nav-item'])[2]/select"));
+        public IWebElement Incentive => driver.FindElement(By.XPath("//label[text()='Incentives']"));
+        public IWebElement FirstChangeSetID => driver.FindElement(By.XPath("(//div[@class='changeset-id col ng-star-inserted'])[1]"));
+        public IWebElement RetailAPRDelta => driver.FindElement(By.XPath("(//div[contains(text(),'Retail APR Delta')])[1]"));
+        public IWebElement NewRetailAPRDelta => driver.FindElement(By.XPath("(//button[contains(@class,'create-card-element round-button')])[1]"));
+        public IWebElement EffectiveFrom => driver.FindElement(By.XPath("(//input[contains(@name,'dp')])[1]"));
+        public IWebElement MinTerm => driver.FindElement(By.XPath("(//input[contains(@name,'minTerm')])[1]"));
+        public IWebElement MaxTerm => driver.FindElement(By.XPath("(//input[contains(@name,'maxTerm')])[1]"));
+        public IWebElement Tier2Delta => driver.FindElement(By.XPath("//label[@for='tier2']"));
+        public IWebElement Tier3Delta => driver.FindElement(By.XPath("//label[@for='tier3']"));
+        public IWebElement Tier4Delta => driver.FindElement(By.XPath("//label[@for='tier4']"));
+        public IWebElement ZeroRate1 => driver.FindElement(By.XPath("//input[@id='zeroRateTier2Amount']"));
+        public IWebElement NonZeroRate1 => driver.FindElement(By.XPath("//input[@id='nonZeroRateTier2Amount']"));
+        public IWebElement ZeroRate2 => driver.FindElement(By.XPath("//input[@id='zeroRateTier3Amount']"));
+        public IWebElement NonZeroRate2 => driver.FindElement(By.XPath("//input[@id='nonZeroRateTier3Amount']"));
+        public IWebElement ZeroRate3 => driver.FindElement(By.XPath("//input[@id='zeroRateTier4Amount']"));
+        public IWebElement NonZeroRate3 => driver.FindElement(By.XPath("//input[@id='nonZeroRateTier4Amount']"));
+        public IWebElement Save => driver.FindElement(By.XPath("(//button[text()='Save'])[1]"));
+        public IWebElement Submit => driver.FindElement(By.XPath("(//button[text()='Submit'])[1]"));
+        public IWebElement PendingApproval => driver.FindElement(By.XPath("//label[contains(text(),'Pending Approval')]"));
+        public IWebElement ManagerApproved => driver.FindElement(By.XPath("(//label[@for='Manager-Approved'])[1]"));
+        public IWebElement Approve => driver.FindElement(By.XPath("(//div[contains(text(),'7')])[1]/following::div[1]/button[2]"));
+        public IWebElement ChangeSetID => driver.FindElement(By.XPath("(//div[@class='changeset-id col ng-star-inserted'])[1]"));
+        public IWebElement ReadyToPublish => driver.FindElement(By.XPath("(//label[@for='ReadyToPublish'])[1]"));
+        public IWebElement ViewAPRSorCreateNewOffers => driver.FindElement(By.XPath("(//div[@class='card-text text-center'])[3]"));
+        public IWebElement CreateViewAPRSorCreateNewOffers => driver.FindElement(By.XPath("//button[@class='create-card-element round-button']"));
+        public IWebElement Tier2 => driver.FindElement(By.XPath("//label[@for='tier2']"));
+        public IWebElement Tier3 => driver.FindElement(By.XPath("//label[@for='tier3']"));
+        public IWebElement Tier4 => driver.FindElement(By.XPath("//label[@for='tier4']"));
+        public IWebElement Tier2ZeroRate => driver.FindElement(By.XPath("//td[contains(text(),'3')]"));
+        public IWebElement Tier3ZeroRate => driver.FindElement(By.XPath("//td[contains(text(),'4')]"));
+        public IWebElement Tier4ZeroRate => driver.FindElement(By.XPath("//td[contains(text(),'5')]"));
+
+        public void SelectEffectiveFromDate(string date)
+        {
+            GenericHelper.SelectDate(EffectiveFrom, date);
+        }
+
+        public void EnterMinTerm(string value)
+        {
+            GenericHelper.EnterText(MinTerm, value);
+        }
+
+        public void EnterMaxTerm(string value)
+        {
+            GenericHelper.EnterText(MaxTerm, value);
+        }
+
+        public void ClickSave()
+        {
+            GenericHelper.ClickElement(Save);
+        }
+
+        public void ClickSubmit()
+        {
+            GenericHelper.ClickElement(Submit);
+        }
+    }
+}
+```
+
+### **VerifyRatesPullViewAPRSorCreateNewOffers_262142.cs **
+```csharp
+using OpenQA.Selenium;
+using Originations.PageObjects;
+using Origination.Utils;
+
+namespace Originations.Tests
+{
+    public class VerifyRatesPullViewAPRSorCreateNewOffers_262142
+    {
+        private IWebDriver driver;
+
+        public VerifyRatesPullViewAPRSorCreateNewOffers_262142(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+
+        public void ExecuteTest()
+        {
+            var page = new RatesPullViewAPRSorCreateNewOffers_262142(driver);
+
+            Console.WriteLine("Step 1: Log into the RIMS");
+            RIMS_Helper.LaunchApplicationRIMS("https://rims-tst1.app.corpint.net/#/");
+
+            Console.WriteLine("Step 2: Click on the 'Incentives' tab");
+            GenericHelper.ClickElement(page.Incentive);
+
+            Console.WriteLine("Step 3: Click on the 'Retail APR Delta' button");
+            GenericHelper.ClickElement(page.RetailAPRDelta);
+
+            Console.WriteLine("Step 4: Click on 'Create a New Retail APR Delta' button");
+            GenericHelper.ClickElement(page.NewRetailAPRDelta);
+
+            Console.WriteLine("Step 5: Select Effective From Date from Calendar");
+            page.SelectEffectiveFromDate("2023-01-01");
+
+            Console.WriteLine("Step 6: Enter value for Min Term");
+            page.EnterMinTerm("12");
+
+            Console.WriteLine("Step 7: Enter value for Max Term");
+            page.EnterMaxTerm("60");
+
+            Console.WriteLine("Step 8: Click 'Tier2Delta'");
+            GenericHelper.ClickElement(page.Tier2Delta);
+
+            Console.WriteLine("Step 9: Click 'Tier3Delta'");
+            GenericHelper.ClickElement(page.Tier3Delta);
+
+            Console.WriteLine("Step 10: Click 'Tier4Delta'");
+            GenericHelper.ClickElement(page.Tier4Delta);
+
+            Console.WriteLine("Step 11: Enter value for ZeroRate1");
+            GenericHelper.EnterText(page.ZeroRate1, "0.0");
+
+            Console.WriteLine("Step 12: Enter value for NonZeroRate1");
+            GenericHelper.EnterText(page.NonZeroRate1, "1.0");
+
+            Console.WriteLine("Step 13: Enter value for ZeroRate2");
+            GenericHelper.EnterText(page.ZeroRate2, "0.0");
+
+            Console.WriteLine("Step 14: Enter value for NonZeroRate2");
+            GenericHelper.EnterText(page.NonZeroRate2, "1.0");
+
+            Console.WriteLine("Step 15: Enter value for ZeroRate3");
+            GenericHelper.EnterText(page.ZeroRate3, "0.0");
+
+            Console.WriteLine("Step 16: Enter value for NonZeroRate3");
+            GenericHelper.EnterText(page.NonZeroRate3, "1.0");
+
+            Console.WriteLine("Step 17: Click 'Save' button");
+            page.ClickSave();
+
+            Console.WriteLine("Step 18: Capture and Save 'FirstChangeSetID'");
+            string firstChangeSetID = page.FirstChangeSetID.Text;
+
+            Console.WriteLine("Step 19: Click 'Submit' button");
+            page.ClickSubmit();
+
+            Console.WriteLine("Step 20: Log into the RIMS");
+            RIMS_Helper.LaunchApplicationRIMS("https://rims-tst1.app.corpint.net/#/");
+
+            // Continue with the remaining steps...
+        }
+    }
+}
+```

@@ -1,0 +1,18 @@
+{
+	"username": "Brower\\Lruser002",
+	"password": "March@002",
+	"captivePartner": "INEOS",
+	"role": "RIMS.ALL",
+	"effFrmDay1": "28",
+	"effFrmMonth1": "Jun",
+	"effFrmYear1": "2025",
+	"effFrmDay2": "28",
+	"effFrmMonth2": "Aug",
+	"effFrmYear2": "2025",
+	"RatePercentageInput" : "12",
+	"TierDropdown": "2",
+	"MinTerm": "5",
+	"MaxTerm": "9",
+	"RejectionReason" : "Incorrect Amount(s)"
+	
+	}

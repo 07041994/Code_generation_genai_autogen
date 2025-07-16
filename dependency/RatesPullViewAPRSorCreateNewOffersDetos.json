@@ -1,0 +1,18 @@
+{
+	"username": "Brower\\Lruser002",
+	"password": "March@002",
+	"captivePartner": "Chrysler",
+	"role": "RIMS.ALL",
+	"effFromDay": "28",
+	"effFromMonth": "Aug",
+	"effFromYear": "2025",
+	"Min Term" : "5",
+	"Max Term" : "9",
+	"ZeroRate1" : "1",
+	"NonZeroRate1" : "2",
+	"ZeroRate2" : "3",
+	"NonZeroRate2" : "4",
+	"ZeroRate3" : "5",
+	"NonZeroRate3" : "6"
+	
+	}

@@ -1,0 +1,9 @@
+log_file: "logs/app.log"
+sample_files:
+    input_files: "Data_Files/input_files/"
+    sample_files_input: "Data_Files/sample_files/Input"
+    sample_files_output: "Data_Files/sample_files/Output"
+    sample_files_input_rims: "Data_Files/sample_files_rims/Input"
+    sample_files_output_rims: "Data_Files/sample_files_rims/Output" 
+Validation: True
+

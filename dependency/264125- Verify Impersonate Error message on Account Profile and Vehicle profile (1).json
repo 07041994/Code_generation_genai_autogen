@@ -1,0 +1,226 @@
+{
+  "MyAccountAdminPage": {
+    "username": {
+      "element_type": "inputtext",
+      "by": "xpath",
+      "id-obj": "//input[@data-bind='value: searchCriteria']"  
+    },
+    "searchby": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//select[@id='type']"
+    },
+	"imparsonate": {
+      "element_type": "button",
+      "by": "id",
+      "id-obj": "btnImmpersonate"
+    },
+	"TokenValidation": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//span[@class='subtitle']"
+    },
+	"secondFactorTocken": {
+      "element_type": "inputtext",
+      "by": "xpath",
+      "id-obj": " //div[@id='AdminLogin']//input[2]"
+    },
+	"authenticate": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='btn btn-success']"
+    },
+  	"PleaseEnterToken": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "SecondToken"
+    },  
+	"secondToken": {
+      "element_type": "link",
+      "by": "id",
+      "id-obj": "SecondToken"
+    },  
+	"Login": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='btn btn-success-icon btn-login']"
+    }
+  },
+  "MyAccountSummaryPage": {
+    "Account_summary_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[@id='accountSummaryPage']/h1/span[2]"
+    },
+    "accountProfile": {
+      "element_type": "link",
+      "by": "xpath",
+      "id-obj": "//li[@class='menu-item account-profile']"
+    },
+	"VehicleAndClaimButton": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='btn btn-summary-round' and @data-navto='/Account/vehicle']"
+    }
+  },
+  "MyAccountProfilePage": {
+    "primaryAddressText": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h3[contains(text(),'Primary Address')]"
+    },
+    "MailingAddress": {
+      "element_type": "text",
+      "by": "id",
+      "id-obj": "m-address"
+    },
+    "City": {
+      "element_type": "text",
+      "by": "id",
+      "id-obj": "m-city"
+    },
+    "State": {
+      "element_type": "text",
+      "by": "id",
+      "id-obj": "m-state"
+    },
+    "ZipCode": {
+      "element_type": "text",
+      "by": "id",
+      "id-obj": "m-zip-code"
+    },
+    "CellPhone": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "profile-phone"
+    },
+    "EditCellPhone": {
+      "element_type": "link",
+      "by": "xpath",
+      "id-obj": "//span[@class='fa fa-pencil']"
+    },
+    "UpdateButtun": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//a[@class='small button active' and contains(text(),'Update')]"
+    },
+    "EmailAddress": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "email-address"
+    },
+    "StmtPreferanceElectronic": {
+      "element_type": "label",
+      "by": "xpath",
+      "id-obj": "//label[@for='statement-electronic']"
+    },
+    "EmailPrefenrance": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//span[@class='fa fa-chevron-right fa-2x'])[1]"
+    },
+    "AccountRelatedEmail": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//span[@class='fa fa-check-square fa-2x active'])[1]"
+    },
+    "SmsPrefenrance": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//span[@class='fa fa-chevron-right fa-2x'])[2]"
+    },
+    "Promotion&SpecialOffer": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "(//span[@class='fa fa-square fa-2x inactive'])[4]"
+    },
+    "Save": {
+      "element_type": "button",
+      "by": "id",
+      "id-obj": "profile-save-btn"
+    },
+    "imparsonate_error":{
+	  "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[contains(text(),'action is not allowed while impersonating')]"
+    },
+	"backToAccSummaryLink":{
+	  "element_type": "link",
+      "by": "xpath",
+      "id-obj": "//p[contains(text(),'Back to Account Summary')]"
+    },
+	"DoYouWantToLeaveButton_Yes":{
+	  "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//a[@class='small button active confirm-modal-button']"
+    }
+	
+  },
+  
+  "MyAccountVehiclePolicyPage": {
+    "VehicleInfo_header": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//h1[contains(text(),'Vehicle Info')]"
+    },
+    "GarageAdrressLink": {
+      "element_type": "link",
+      "by": "xpath",
+      "id-obj": "//div[@class='vcard']//div[@class='fn']"
+    },
+	"GarageAddressText": {
+      "element_type": "Text",
+      "by": "xpath",
+      "id-obj": "//h2[contains(text(),'Garage Address')]"
+    },
+	"AddressInputText": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "garage-street1"
+    },
+    "CityInputText": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "garage-city"
+    },
+	"StateDropdown": {
+      "element_type": "dropdown",
+      "by": "id",
+      "id-obj": "garage-state"
+    },
+	"ZipCodeInputText": {
+      "element_type": "inputtext",
+      "by": "id",
+      "id-obj": "garage-zipcode"
+    },
+	"SaveButton": {
+      "element_type": "Button",
+      "by": "xpath",
+      "id-obj": "//a[@class='button btn-block save-form' and @href='#garage-address']"
+    },
+	"imparsonate_error":{
+	  "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//*[contains(text(),'action is not allowed while impersonating')]"
+    }
+  }
+  ,
+  "UserDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/a/span[2]"
+  },
+  
+	"Signout": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj":"//*[@id='menu-secondary']/li[6]/ul/li[4]/a"
+  },
+  
+  "Signout_message": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj":"//*[contains(text(),'You are now signed out')]"
+  }
+}  
+

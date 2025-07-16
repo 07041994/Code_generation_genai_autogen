@@ -1,0 +1,165 @@
+{
+  "Dashboard": {
+    "captivePartnerDropDown": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "(//div[@class='rims-nav-item'])[2]/select"
+    }
+  },
+  "Incentive": {
+	  "incentive": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//label[text()='Incentives']"
+    },
+	"createBasePricingDefaults": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()='Base Pricing Defaults']"
+    },
+	"createCard": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[@class='create-card-element round-button']"
+    },
+	"Save": {
+      "element_type": "button",
+      "by": "xpath",
+      "id-obj": "//button[text()='Save']"
+    },
+	"pricingAttributeType": {
+      "element_type": "dropdown",
+      "by": "xpath",
+      "id-obj": "//select[@placeholder='Attribute Type']"
+    },
+	"pricingAttributeAmount": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//input[@placeholder='Attribute Amount']"
+    },
+	"minTerm": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//input[@placeholder='Min Term']"
+    },
+	"maxTerm": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//input[@placeholder='Max Term']"
+    },
+	"selectTiers": {
+      "element_type": "checkbox",
+      "by": "xpath",
+      "id-obj": "//label[@for='tierAll']"
+    },
+	"MinTermValue": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Min term must be at least 1. ']"
+    },
+	"MaxTermValue": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Max Term must be at most 100. ']"
+    },
+	"MinDecimalValue": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Min Term cannot have a decimal. ']"
+    },
+	"MaxDecimalValue": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Max Term cannot have a decimal. ']"
+    },
+	"HigherMinThanMax": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Max Term cannot be less than Min Term. ']"
+    },
+	"BaseLeastFifty": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount must be at least 50 ']"
+    },
+	"BaseMostThousandFiveHundred": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount must be at most 1500 ']"
+    },
+	
+	"LeastParticipationMost": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount must be at most 0.00085 ']"
+    },
+	"SecurityDepositMost": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount must be at most 1 ']"
+    },
+	"SecurityDepositLeast": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount must be at least 0.25 ']"
+    },
+	"BlankEffectiveFrom": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Effective From Date is required. ']"
+    },
+	"InvalidEffectiveFromDate": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Effective From Date cannot be backdated more than 30 days from today. ']"
+    },
+	"BlankPricingAttributeType": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Type is required. ']"
+    },
+	"BlankTier": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' You must select at least one tier. ']"
+    },
+	"BlankMinTerm": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Min Term is required. ']"
+    },
+	"BlankMaxTerm": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Max Term is required. ']"
+    },
+	"BlankPricingAttributeAmount": {
+      "element_type": "text",
+      "by": "xpath",
+      "id-obj": "//div[text()=' Pricing Attribute Amount is required. ']"
+    }
+	
+	
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  }
+	
+
+  
